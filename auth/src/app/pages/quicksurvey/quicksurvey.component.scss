@@ -1,0 +1,57 @@
+#login {
+    width: 40%;
+    margin-bottom: 5%;
+}
+#cancel{
+  float: right;
+  color: palevioletred;
+  margin-bottom: 80px;
+  
+     }
+#standard{
+   margin-top: 10px;
+   margin-left:220px;
+   margin-bottom: 10px;
+}  
+
+.survey{
+    text-align: center;
+
+}
+.survey h3{
+    // margin-bottom: 20px ;
+    margin-top: 10px;
+    
+
+}  
+
+.Smiles{
+    display: flex;
+    // align-content: space-between;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    //margin: 30px;
+     padding: 20px;
+   ;
+
+} 
+
+
+.happy {
+    color: rgb(28, 21, 175);
+    margin-left:15px;
+    margin-right: 15px;
+}
+.indifferent{
+    color:rgb(145, 145, 13);
+   
+
+}
+
+.Nothappy{
+    color:red;
+   
+  
+}

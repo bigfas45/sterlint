@@ -1,0 +1,85 @@
+
+<main>
+    <app-header [title]="'Manage App'" ></app-header>
+    <section>
+        <mat-toolbar>
+            <input type="text" placeholder="Search" class="search-field" (input)="search($event)">
+            <span class="example-spacer"></span>
+            <button (click)="addAppControl()" mat-button>
+               <img src="../../../assets/add-icon.png" alt="" style="width: 17px;"> &nbsp;&nbsp; Add New App
+            </button>        
+        </mat-toolbar>
+    </section>
+ 
+    <section>
+        <div class="table-container">
+            <table  *ngIf="isloading == false" class="example-list"   class="ui compact celled definition table"  >
+                <thead  class="table-head">
+                    <tr>
+                        <th id="table-app-name" class="table-title">App Name</th>
+                        <th id="table-app-url" class="table-title">App URL</th>
+                        <th id="table-app-menu-name" class="table-title">App Menu Name</th>
+                        <th id="table-app-route" class="table-title">App Route</th>
+                        <th id="table-status" class="table-title">Status</th>
+                        <th id="table-action" class="table-title">Edit</th>
+                        <th id="table-action" class="table-title">Delete</th>
+                    </tr>
+                </thead>
+                <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+        
+                    <tr class="border-bottom" *ngFor="let control of controls" cdkDrag >
+                        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        
+                        <td>
+                            <div class="td-regular">
+                                {{control.result.appName}} 
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-url">
+                                {{
+                                    control.result.appURL.length>40
+                                    ?control.result.appURL.substr(0,40)+'...'
+                                    :control.result.appURL
+                                }}
+                            </div>
+                        </td>
+                        <td >
+                            <div class="td-value">
+                                {{control.result.appMenuName}}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="td-value">
+                                {{control.result.appRoute}}
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <mat-slide-toggle (click)="setStatus(control.result.status, control.result.id)" checked={{control.result.status}} ></mat-slide-toggle> 
+                            </div>
+                        </td>
+        
+                        <td class="collapsing">
+                            <div (click)="editapp(control.result)">        
+                                <mat-icon style="color: rgb(49, 92, 202); cursor: pointer;">edit</mat-icon>
+                            </div>                 
+                        </td>
+                        <td class="collapsing">
+                            <div (click)="deleteapp(control.result.id)">
+                                <mat-icon style="color: rgb(202, 49, 54); cursor: pointer;">restore_from_trash</mat-icon>
+                            </div>                 
+                        </td>
+                    </tr>
+                </tbody>
+             
+            </table>
+            <div *ngIf="isloading == true" class="loading-container">
+                <mat-spinner></mat-spinner>
+                <div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

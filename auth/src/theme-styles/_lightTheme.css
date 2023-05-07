@@ -1,0 +1,11 @@
+html[data-theme='light'] {
+    --auth-backgroundColour: #fff;
+    --auth-PrimaryText: #1D1D1D;
+    --auth-SecondaryText: #616E88;
+
+    --auth-alternateBackground: #EDEDED;
+    --auth-border: #E5E5E5;
+
+    --auth-cardBackground: #f1f1f1;
+    --auth-cardText: #1D1D1D;
+}

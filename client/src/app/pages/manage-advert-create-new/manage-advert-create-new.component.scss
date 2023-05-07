@@ -1,0 +1,29 @@
+main{
+    overflow: scroll;
+    height: 100%;
+    background: #fff;
+}
+
+
+.create-new-container{
+    cursor: pointer;
+    text-align: center; width: fit-content; margin: auto;
+    margin-top:40%;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 20px;
+    background: #fff;
+    font-weight: 500;
+    // box-shadow: 5px 5px 10px #888888;
+    background: #f7f7f7;
+    div{
+
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 30px;
+        width: fit-content;
+        margin: auto;
+    }
+}

@@ -1,0 +1,36 @@
+<a class="button-back" routerLink="/auth/Chosebankingtype">
+    <mat-icon>arrow_back_ios</mat-icon>
+    <p i18n> Go Back </p>
+</a>
+<h3 i18n> Pin Reset</h3>
+<div class="fill">
+ <p i18n> Fill in the correct details below to reset your password.</p>
+</div>
+  
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="example-form">
+      <mat-form-field appearance="outline">
+        <mat-label i18n>Enter Your Internet Banking ID</mat-label>
+        <input matInput
+        ngModel
+         name="BankingID">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label i18n>Enter Your Pin</mat-label>
+        <input matInput 
+        ngModel
+        name="Pin">
+      </mat-form-field>     
+    </div>
+    <div class="example-button-row">
+
+      <button mat-raised-button id="SUBMIT"  [disabled]="!f.valid" i18n>SUBMIT</button>
+     
+      
+      <button mat-raised-button id="CANCEL" routerLink="/auth/resetPassword" i18n>CANCEL</button>
+    </div> 
+    
+     
+</form>

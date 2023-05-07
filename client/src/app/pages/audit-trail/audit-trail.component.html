@@ -1,0 +1,59 @@
+<main>
+    <app-header [title]="'Audit Trail'"></app-header>
+  <section>
+        <mat-toolbar>
+            <input type="text" placeholder="Search for customers or account" class="search-field" >
+                  
+        </mat-toolbar>
+    </section>
+    
+    <section class="container-flex">
+        <div class="container-flex-child child2">
+            <div>
+                <table class="example-list"   class="ui compact celled definition table"  >
+                    <thead  class="table-head">
+                        <tr>
+                            <th id="table-fullname" class="table-title">FULL NAME</th>
+                            <th id="table-email" class="table-title">EMAIL</th>
+                            <th id="table-action" class="table-title">ACTION</th>
+                            <th id="table-firstlogin" class="table-title">FIRST LOGIN</th>
+                            <th id="table-lastlogin" class="table-title">LAST LOGIN</th>
+                        </tr>
+                    </thead>
+                    <tbody cdkDropList >
+            
+                        <tr class="border-bottom" *ngFor="let control of auditList" cdkDrag >
+                            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            
+                            <td>
+                                <div>
+                                    Ehizojie Solomon Ihayere
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    ehizojie.ihayere@stanbicibtc.com
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Customer listing (viewing a...
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Jan 12, 2021 16:32
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Jan 12, 2021 16:32
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>

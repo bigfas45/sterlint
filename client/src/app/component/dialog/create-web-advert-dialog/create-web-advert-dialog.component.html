@@ -1,0 +1,40 @@
+<main>
+    <h2 mat-dialog-title>
+        Create New Advert
+    </h2>
+    <form [formGroup]="createAdvertForm" >
+        <mat-dialog-content class="dialog-content">
+    
+            <div>
+                <p class="formlabel">
+                    Background Image
+                </p>
+                <div class="bg-image-advert">
+    
+                </div>
+                <input type="file" class="search-field" name="advertUri" (change)="onFileSelect($event)">
+        
+                <p class="formlabel">
+                    Title
+                </p>
+                <input type="text" class="search-field" formControlName="title" >
+        
+                <p class="formlabel">
+                    Description
+                </p>
+                <textarea name="" id="" class="search-field" cols="30" rows="10" formControlName="description"></textarea>
+        
+                
+                
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button class="continue-btn" (click)="addControl()" mat-button>
+                Submit
+            </button>
+            <button mat-button mat-dialog-close="cancel">
+                Cancel
+            </button>
+        </mat-dialog-actions>
+    </form>
+</main>

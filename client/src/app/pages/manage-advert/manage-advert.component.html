@@ -1,0 +1,69 @@
+<section>
+    <div class="flex-container">
+        <div class="flex-child advert-list-section">
+            <div class="manage-adv-title">
+                <table>
+                    <tr>
+                        <td style="width: 300px;">
+                            Adverts List 
+                        </td>
+                        <td >
+                            <img src="../../../assets/add-advert.png" alt="" style="width: 25px; margin-right: 10px;" (click)="createAdvert()"> 
+                            <!-- <button  > Create New</button> -->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section-divider"></div>
+            <div class="ad-list" *ngFor="let data of dataList" (click)="switchTo(data.title, data.advertUri)">
+                <table>
+                    <tr>
+                        <td>
+                            <img class="advert-list-image" [src]="data.advertUri">
+                        </td>
+                        <td style="width:400px;">
+                            <div class="ad-list-info">
+                                <div class="ad-list-name">
+                                    {{data.title}}
+                                </div>
+
+                                <div *ngIf="data.status == true" class="ad-list-status">
+                                    Active
+                                </div>
+                                <div *ngIf="data.status == false" class="ad-list-status-disabled">
+                                    Disabled
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <mat-icon>chevron_right</mat-icon>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div *ngIf="isLoadingAdvert==true" class="loading-container">
+                <mat-spinner></mat-spinner>
+                <div>
+                    Loading...
+                </div>
+            </div>
+
+        </div>
+        <div class="flex-child advert-activity-section">
+
+
+            <app-manage-web-advert-display *ngIf="displayTitle!=null && createNew==false"  
+            [title]="displayTitle" 
+            [description]="displayDescription"
+            [callToAction]="displayCallToAction"
+            [displayAudience]="displayAudience"
+            [eligibility]="displayEligibility"
+            [status]="displayStatus"
+            [advertUri]="displayImage"
+            ></app-manage-web-advert-display>
+            
+            <app-manage-advert-create-new *ngIf="displayTitle==null"></app-manage-advert-create-new>
+        </div>
+    </div>
+</section>

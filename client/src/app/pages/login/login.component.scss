@@ -1,0 +1,69 @@
+
+.flex-container {
+    display: flex;
+}
+.flex-child {
+    height: 100vh;
+    flex: 1;
+    
+}
+
+@media (width < 801px) {
+    .flex-container {
+        display: block;
+    }
+    .flex-child {
+        height: 100vh;
+        flex: 1;
+    }
+    .image-section{
+        display: none;
+    }
+}
+
+.image-section{
+    background: url('../../../assets/login-img.png') no-repeat center;
+    background-size: cover;
+}
+
+.form-section{
+    background: linear-gradient(180deg, #0032A1 0%, #0190D8 100%);
+}
+
+.form-div{
+    width: 70%;
+    margin: auto;
+    color: #fff;
+    padding-top: 20%;
+}
+mat-form-field{
+    width: 100%;
+}
+
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    background: #081B34;
+
+    color: white;
+  }
+  /* Font color */
+  input.mat-input-element {
+    color: white;
+  }
+
+  mat-form-field {
+    color: #fff !important;
+
+    .mat-hint, input, ::placeholder, .mat-form-field-label {
+      color: #fff !important;
+    }
+  }
+
+.auth-btn{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #102346;
+    background: #fff;
+}
+

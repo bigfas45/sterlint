@@ -1,0 +1,9 @@
+html[data-theme='dark'] {
+    --cardMgt-backgroundColour: #181818;
+    --cardMgt-PrimaryText: #ffffff;
+    --cardMgt-SecondaryText: #ffffff;
+    
+    --cardMgt-alternateBackground: #323232;
+    --cardMgt-border: #323232;
+
+}

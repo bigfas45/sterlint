@@ -1,0 +1,63 @@
+a.button-back{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5%;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+a.button-back mat-icon {
+    transform: scale(0.8);
+    margin-right: 2%;
+}
+.fill{
+    margin-top: 10px;
+    margin-bottom: 40px;
+   font-size: 11.8px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+.mat-form-field{
+    width: 100%;
+}
+button{
+    margin-top: 160px;
+    height:42px
+}
+
+
+
+#SUBMIT{
+    background-color: #0033AA;
+    color: white;
+    width:120px
+}
+
+#CANCEL{
+    width:120px
+}
+
+.example-button-row .mat-button-base{
+    margin-left:12px ;
+}
+
+
+/*below 740px(Smaller tablets)*/
+@media(max-width:430px){
+    #SUBMIT{
+       
+        width:80px !important
+    }
+  
+    #CANCEL{width: 80px !important;
+    // margin: 20px;
+    }
+    
+  }
+

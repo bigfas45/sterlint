@@ -1,0 +1,587 @@
+<div class="main-wrapper">
+
+
+<div *ngIf="loaderIsActive">
+  <mat-progress-bar
+    mode="indeterminate"
+    color="{{ progressColor || 'primary' }}"
+  ></mat-progress-bar>
+</div>
+<div
+  style="margin-top: 20px; min-height: 600px; "
+  class="profile-page-wrapper"
+  id="beneficiary-page-wrapper"
+>
+ 
+  <div class="row">
+    <!-- <div class="col-md-3 col-xs-12">
+      <div class="tab">
+        <button class="tablinks" aria-disabled="true">
+          <i class=""></i> Debit Cardssss
+        </button>
+      </div>
+    </div> -->
+    <div
+      class="col-md-9 col-xs-12"
+      style="overflow-x: auto"
+      id="beneficiary_content"
+    >
+      <div
+        id="beneficiaryList"
+        class="tabcontent"
+        style="background: transparent !important; border: none"
+      >
+        <div class="tab-body">
+          <div>
+            <div>
+              <div *ngIf="loaderIsActive && waiter">
+                <div>
+                  <div id="card-list" style="padding: 4rem 4rem 2rem 4rem">
+                    <div> </div>
+                    <div class="beneficiaries-list-wrapper">
+                      <div
+                        class="col-md-3 col-xs-12"
+                        style="margin-left: 35%; margin-right: 35%"
+                      >
+                        <span
+                          style="margin-left: 40%; margin-right: 40%"
+                          class="fa fa-spin fa-refresh fa-2x"
+                        ></span>
+                        &nbsp;&nbsp;
+                        <span style="margin-right: 5%; margin-left: 5%"
+                          >{{ "loading Data  ... please wait" }}</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="activecardDatas === 'no cards found'">
+                <div class="no-active-card">
+                  <img src="../../../../assets/img/no-card.png" alt="" style="width: 200px;"/>
+                  <span
+                    >Please be informed that you have no active debit card at
+                    the moment</span
+                  >
+                </div>
+              </div>
+
+              <div *ngIf="showDebitCard">
+                <div id="card-list" style="padding: 1rem 1rem 2rem 1rem">
+                  <div style="align-items: center">
+                    <span
+                      ><b>
+                        <h3
+                          style="font-size: 20px !important; margin-bottom: 0px"
+                        >
+                          My Debit Cards
+                        </h3>
+                      </b></span
+                    >
+                    <br />
+                  </div>
+                  <p class="subheading-text">
+                    Give consent for Debit Card auto-renewal here
+                  </p>
+                  <br />
+                  <div class="beneficiaries-list-wrapper">
+                    
+                    <div class="">
+                      <div
+                        class=""
+                        style="
+                          text-align: center;
+                          /* width: 600px; */
+                          margin: 0 10%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                      <swiper
+                      [config]="{
+                        slidesPerView: 'auto',
+                        centeredSlides: true,
+                        spaceBetween: 30,
+                        pagination: {
+                          clickable: true
+                        }
+                      }"
+                    >
+                      <ng-template swiperSlide *ngFor="let item of creditCards; let i = index" >
+                   
+                        
+                          <div>
+                            <div>
+                              <div
+                                class="virtualCard"
+                                [ngClass]="{ blocked: cardBlocked == true }"
+                              >
+                                <div class="virtualCardRow">
+                                  <div
+                                    style="
+
+                                      justify-content: start;
+                                      text-align: start;
+                                    "
+                                  >
+                                    <P style="margin: 0;" >CARD TYPE</P>
+                                    <strong>Debit</strong>
+                                  </div>
+                                  <div>
+                                    <img [src]="'icons/card-chip.png' | assetUrl" alt="" />
+                                  </div>
+                                </div>
+
+                                <div class="cardNumber">
+                                  <span
+                                    style="font-size: 24px; font-weight: bold"
+                                    >{{ item.maskedPAN }}</span
+                                  >
+                               
+                                </div>
+
+                                <div class="virtualCardRow">
+                                  <div>
+                                    <span>Card Holder</span>
+                                    <div>{{item.accountName | titlecase}}</div>
+                                  </div>
+                                  <div>
+                                    <span>Expires</span>
+                                    <div>
+                                      {{ item.expiryDate }}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                           
+                            </div>
+                            <div class="" *ngIf="cardBlocked == false">
+                              <button
+                                *ngIf="item.consentStatus.toLowerCase() !== 'n'"
+                                (click)="selectToggle(i)"
+                                type="button"
+                                mat-stroked-button
+                                color="primary"
+                                style="
+                                  border-radius: 54px;
+                                  color: #dc1d00;
+                                  margin-left: -50%;
+
+                                  margin-top: 10px;
+                                "
+                              >
+                                Deactivate Auto Renewal
+                              </button>
+                              <button
+                                *ngIf="item.consentStatus.toLowerCase() == 'n'"
+                                (click)="selectToggle(i)"
+                                type="button"
+                                mat-stroked-button
+                                color="primary"
+                                style="
+                                  border-radius: 54px;
+                                  color: #005cc8;
+                                  margin-left: -50%;
+                                  margin-top: 10px;
+                                "
+                              >
+                                Activate Auto Renewal
+                              </button>
+
+                              <br />
+                            </div>
+                            <p *ngIf="cardBlocked == true">
+                              This card is currently blocked
+                            </p>
+                            </div>
+                          </ng-template>
+
+                                         
+                        </swiper>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="selectAccount">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <h5><b>Select account linked to this card</b></h5>
+                  <mat-form-field [formGroup]="accountForm">
+                    <mat-label>Select debit card account</mat-label>
+                    <mat-select
+                      formControlName="account"
+                      placeholder="Select Account"
+                      required=""
+                      (selectionChange)="onSelectedBranchChanged($event)"
+                    >
+                      <mat-option
+                        *ngFor="let account of accountNumbers"
+                        [value]="account"
+                        style="
+                          line-height: 1em !important;
+                          font-size: 12px !important;
+                          font-weight: bold;
+                        "
+                      >
+                        <div style="display: block">
+                          {{
+                            account.accountNumber +
+                              " " +
+                              account.accountName +
+                              " " +
+                              "Balance: N" +
+                              account.availableBalance
+                          }}
+                        </div>
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <div mat-dialog-actions>
+                    <button mat-button (click)="goBack2()">Cancel</button>
+                    <button
+                      mat-button
+                    
+                      class="mat-raised-button mat-primary"
+                      (click)="proceedtoOtp()"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="otpshow">
+                <div id="card-list" style="padding: 4rem 4rem 1rem 4rem">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div
+                        style="margin-left: 1px !important; margin-right: 5%"
+                      >
+                        <button
+                          class="foci"
+                          (click)="goBack2()"
+                          style="
+                            background-color: #ffffff;
+                            border: none;
+                            cursor: pointer;
+                          "
+                        >
+                          <i class="ti ti-arrow-left"></i> Go Back
+                        </button>
+                      </div>
+                      <div style="align-items: center">
+                      </div>
+                      <div class="beneficiaries-list-wrapper">
+                        <div class="account-x-card credit-card-design">
+                          <div
+                            style="
+                              margin-left: 5%;
+                              margin-bottom: 0px;
+                              margin-top: 10%;
+                              display: flex;
+                              justify-content: space-between;
+                              padding-right: 20px;
+                            "
+                          >
+                            <p
+                              class="account-name-truncate"
+                              style="margin-top: 2%"
+                            >
+                              <br />
+                              <span class="">CARD TYPE</span>
+                              <br /><b>Debit</b>
+                            </p>
+                            <img
+                                      src="../../../../assets/img/svg/logo.svg"
+                                      style="width: 21px;"
+                                      alt=""
+                                    />
+                          </div>
+
+                          <div
+                            style="
+                              margin-top: 3%;
+                              margin-bottom: 2%;
+                              margin-left: 5%;
+                            "
+                          >
+                            <div class="" style="margin-right: 0%">
+                              <p class="mazel" style="margin-bottom: 1%">
+                                <b>{{ selectedCard.maskedPAN }}</b>
+                              </p>
+                            </div>
+                            <div class="row" style="margin-top: 8%">
+                              <div class="col-md-6">
+                                <p>
+                                  VALID THROUGH<br />
+                                  <b>{{ selectedCard.expiryDate }}</b>
+                                </p>
+                              </div>
+                              <div class="col-md-6" style="text-align: right">
+                                <p style="margin-right: 8%">
+                                  SERIAL NUMBER<br />
+                                  <b>{{ selectedCard.serialNumber }}</b>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div style="align-items: center">
+                      </div>
+                      <div class="beneficiaries-list-wrapper">
+                        <div class="" style="margin-top: 15%">
+                          <div
+                            class=" "
+                            style="
+                              text-align: center;
+                              margin-top: 5%;
+                              margin-bottom: 1%;
+                            "
+                          >
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div
+                                  class=""
+                                  style="text-align: left; width: 100%"
+                                >
+                                  <b class="" style="font-size: 24px"
+                                    >Authenticate consent</b
+                                  >
+                                  <p style="font-size: 14px">
+                                    Please input the OTP sent to your
+                                    mobile number.
+                                  </p>
+                                </div>
+
+                                <div class="charges" *ngIf="selectedCard.consentStatus === 'n' ">
+                                  <strong>This account</strong>
+                                  <p *ngIf="selectedAccount.accountNumber">
+                                    with number {{ selectedAccount.accountNumber }},
+                                  </p>
+                                  <p *ngIf="selectedAccount.accountName">
+                                    and name {{ selectedAccount.accountName }},
+                                  </p>
+                                  <p> will be charged N1,075 (VAT inclusive)</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <form [formGroup]="otpForm">
+                          <div class="row">
+                            <div
+                              class="col-md-6"
+                              style="width: 100% !important"
+                            >
+                              <mat-form-field>
+                                <mat-label> Enter OTP</mat-label>
+                                <input
+                                  [minlength]="4"
+                                  [maxlength]="6"
+                                  autocomplete="off"
+                                  type="text"
+                                  matInput
+                                  required=""
+                                  formControlName="otp"
+                                />
+                              </mat-form-field>
+
+                              <!-- <mat-form-field
+                              appearance="outline"
+                              id = 'new-password'>
+                              <mat-label>Enter OTP</mat-label>
+                              <input
+                               matInput
+                               [minlength]="4"
+                              [maxlength]="6"
+                              autocomplete="off"
+                              type = "text"
+                               formControlName = "otp"
+                               >
+                          </mat-form-field> -->
+                            </div>
+                          </div>
+
+                          <div class="">
+                            <div class="">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <button
+                                        (click)="ResendOtp()"
+                                        type="button"
+                                        mat-stroked-button
+                                        style="text-align: left"
+                                        color="primary"
+                                        [disabled]="loaderIsActive"
+                                      >
+                                        Resend OTP
+                                      </button>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="margin-top: 10%" class="row">
+                            <div class="col-md-12 col-xs-12">
+                              <button
+                                type="submit"
+                                mat-raised-button
+                                color="primary"
+                                (click)="otpValidation()"
+                                [disabled]="loaderIsActive || otpForm.invalid"
+                              >
+                                Verify
+                                <i
+                                  class=""
+                                  style="
+                                    margin-left: 20px;
+                                    background-color: #005cc8;
+                                  "
+                                ></i>
+                              </button>
+                              <button
+                                [disabled]="loaderIsActive"
+                                (click)="goBack2()"
+                                type="reset"
+                                mat-stroked-button
+                                style="margin-left: 15px; border: 2px"
+                              >
+                                <i class="ti ti-close"></i> Cancel
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="successPop">
+                <div>
+                  <div id="card-list" style="padding: 4rem 4rem 2rem 4rem">
+                    <!-- <div class="" style="margin-left: 1px !important; margin-right: 5%; margin-bottom:20px;">
+                      <button  (click)="goBackToTransfer()" style="background-color: #ffffff; border:none;"> <i class="ti ti-arrow-left"></i>  Go Back
+                    </button>
+                    </div> -->
+                    <div
+                      style="align-items: center; text-align: center"
+                    >
+                    </div>
+
+                    <div class="beneficiaries-list-wrapper">
+                      <!-- <div class="row"> -->
+                      <div
+                        class=""
+                        style="
+                          margin-left: 45%;
+                          margin-right: 40%;
+                          color: palegreen;
+                        "
+                      >
+                        <svg
+                          width="75"
+                          height="75"
+                          style="margin-top: 4px"
+                          viewBox="0 0 75 75"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="37.5"
+                            cy="37.5"
+                            r="37.5"
+                            fill="#06DE9D"
+                            fill-opacity="0.08"
+                          />
+                          <circle
+                            cx="37.7812"
+                            cy="37.7812"
+                            r="25.7812"
+                            fill="#06DE9D"
+                            fill-opacity="0.16"
+                          />
+                          <path
+                            d="M50.5938 38.25C50.5938 31.3438 44.9062 25.6562 38 25.6562C31.043 25.6562 25.4062 31.3438 25.4062 38.25C25.4062 45.207 31.043 50.8438 38 50.8438C44.9062 50.8438 50.5938 45.207 50.5938 38.25ZM36.5273 44.9531C36.2227 45.2578 35.6641 45.2578 35.3594 44.9531L30.0781 39.6719C29.7734 39.3672 29.7734 38.8086 30.0781 38.5039L31.2461 37.3867C31.5508 37.0312 32.0586 37.0312 32.3633 37.3867L35.9688 40.9414L43.5859 33.3242C43.8906 32.9688 44.3984 32.9688 44.7031 33.3242L45.8711 34.4414C46.1758 34.7461 46.1758 35.3047 45.8711 35.6094L36.5273 44.9531Z"
+                            fill="#06DE9D"
+                          />
+                        </svg>
+                      </div>
+                      <div class="">
+                        <div
+                          style="
+                            margin-right: 20%;
+                            margin-left: 20%;
+                            text-align: center;
+                          "
+                        >
+                          <span
+                            ><b>
+                              <h3
+                                style="
+                                  font-size: 20px !important;
+                                  margin-top: 0px;
+                                  margin-bottom: 10px;
+                                "
+                              >
+                                {{ AutorenewalStatus }} Successfully
+                              </h3>
+                            </b></span
+                          >
+                        </div>
+                        <br />
+                        <div
+                          style="
+                            margin-top: 12px;
+                            margin-left: 45%;
+                            margin-right: 40%;
+                          "
+                          class=""
+                        >
+                          <div class="">
+                            <button
+                              type="submit"
+                              style="
+                                text-align: center !important;
+                                color: #ffff !important;
+                                background-color: #3f51b5 !important;
+                              "
+                              mat-raised-button
+                              color="primary"
+                              (click)="close()"
+                              [routerLink]="['/home']"
+                              routerLinkActive="router-link-active"
+                            >
+                              Done<i
+                                class=""
+                                style="margin: 0px 0px 0px 0px"
+                              ></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

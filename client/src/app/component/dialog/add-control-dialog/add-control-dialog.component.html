@@ -1,0 +1,36 @@
+<main>
+    <h2 mat-dialog-title>
+        Add Control
+    </h2>
+    <form [formGroup]="controlForm" >
+        <mat-dialog-content class="dialog-content">
+    
+            <div>
+                <span>App Name</span>
+                <input type="text" placeholder="App Name" class="search-field" formControlName="appName"><br>
+                <span>App URL</span>
+                <input type="text" placeholder="App URL" class="search-field" formControlName="appURL"><br>
+                <span>App Menu Name</span>
+                <input type="text" placeholder="App Menu Name" class="search-field" formControlName="appMenuName"><br>
+                <span>App Route</span>
+                <input type="text" placeholder="App Route" class="search-field" formControlName="appRoute"><br>
+                <span>App Icon</span>
+                <input type="text" placeholder="App Icon" class="search-field" formControlName="appIcon"><br>
+        
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button *ngIf="isLoadingSubmit == false" class="continue-btn" (click)="addControl()" mat-button>
+                Submit
+            </button>
+            <button *ngIf="isLoadingSubmit == true"  class="continue-btn" mat-button>
+                <div style="width: fit-content; margin: auto;">
+                    <mat-spinner diameter="30"></mat-spinner>
+                </div>
+            </button>
+            <button mat-button mat-dialog-close="cancel">
+                Cancel
+            </button>
+        </mat-dialog-actions>
+    </form>
+</main>

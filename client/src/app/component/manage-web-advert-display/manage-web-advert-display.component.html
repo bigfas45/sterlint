@@ -1,0 +1,99 @@
+<main>
+
+    <div class="manage-adv-title">
+        {{title}}
+    </div>
+    
+    <section class="containter-section">
+        <div class="flex-container">
+            <div class="flex-child-1">
+                <div>
+                    Update Advert
+                </div>
+            
+                <form [formGroup]="createAdvertForm">
+            
+                    <p class="formlabel">
+                        Title
+                    </p>
+                    <input type="text" formControlName="title" >
+            
+                    <p class="formlabel">
+                        Description
+                    </p>
+                    <textarea name="" id="" cols="30" rows="10" formControlName="description" [value]="description"></textarea>
+            
+                    <p class="formlabel">
+                        Call to action text
+                    </p>
+                    <input type="text" formControlName="callToAction" >
+            
+                    
+                    <p class="formlabel">
+                        Audience
+                    </p>
+                    <div >
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="radio-input-div">
+                                            <mat-checkbox color='primary' class="example-margin">EOL Customers</mat-checkbox>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="radio-input-div">
+                                            <mat-checkbox color='primary' class="example-margin">Retail Customers</mat-checkbox>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                    </div>
+            
+                    <p class="formlabel">
+                        Eligibility
+                    </p>
+                    <div class="eligibility-input-div">
+                        <mat-checkbox color='primary' class="example-margin">Show this advert only when the customer <br> is eligible for loan</mat-checkbox>
+                    </div>
+                    
+                    <button  mat-button (click)="updateAdvert()">Update</button>
+            
+            
+                </form>
+            </div>
+            <div class="flex-child-2">
+                <div>
+                    ...
+                </div>
+                <p class="formlabel">
+                    Background Image
+                </p>
+                <!-- <img class="bg-image-advert" src="../../../assets/default-ads.png"> -->
+
+                <img [src]="advertUri" class="bg-image-advert">
+    
+                <div class="upload-image-info" (click)="uploadphoto()">
+                    <span style="color:Blue">Upload photo</span> or drag and drop here
+                    JPG or PNG (Max 200MB)
+
+                        <input type="file" class="file-input" (change)="getFile($event)" name="" id="upload-file" formControlName="advertUri">
+                </div>
+                <div style="margin-top: 10px;">
+                    <table>
+                        <tr>
+                            <td>
+                                <span>Status</span> 
+                            </td>
+                            <td>
+                                <mat-slide-toggle  ></mat-slide-toggle> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    
+        
+    </section>
+</main>

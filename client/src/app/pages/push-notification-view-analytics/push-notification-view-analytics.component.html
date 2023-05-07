@@ -1,0 +1,53 @@
+<main>
+    <app-header [title]="'Customers'"></app-header>
+ 
+    <div class="flex-container">
+      
+        <button routerLink="/dashboard/push-notifications" mat-button style="border: 1px solid #f5f5f5;">
+            <mat-icon>arrow_back</mat-icon>&nbsp;&nbsp; back
+        </button> 
+       
+    </div>
+    <section class="container-flex">
+        <div class="container-flex-child child1">
+            <div class="flex-child-title">
+                Promotion
+            </div>
+
+            <div class="flex-child-title-value">
+                Christmas
+            </div>
+            <h5>
+                iOS: 20k users
+            </h5>
+
+
+            <section>
+
+            </section>
+        </div>
+        <div class="container-flex-child child2">
+            <div class="flex-child-title">
+                Notification Pattern
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td style="width: 300px;">
+                            <app-push-notification-analytics-card [name]="'Device Type'" [value]="'iOS'"></app-push-notification-analytics-card>
+                        </td>
+                        <td style="width: 300px;">
+                            <app-push-notification-analytics-card [name]="'Device Type'" [value]="'iOS'"></app-push-notification-analytics-card>
+                        </td>
+                        <td style="width: 300px;">
+                            <app-push-notification-analytics-card [name]="'Device Type'" [value]="'iOS'"></app-push-notification-analytics-card>
+                        </td>
+                    </tr>
+                </table>
+
+                
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,72 @@
+<mat-dialog-content>
+  <div  id="confirm-OTP" *ngIf="!requestOngoing">
+    <h3 i18n>Confirm OTP</h3>
+    <div class="enter-otp">
+        <img [src]="'images/smartphone 1.png' | assetUrl" alt="Phone">
+        <p i18n>Please input the OTP sent to your mobile number</p>
+    </div>
+    <form class="otp-form-group" [formGroup]="otpFormGroup" autocomplete="off" #otpForm = ngForm>
+        <mat-form-field id="OTP" appearance="outline">
+          <mat-label i18n>OTP</mat-label>
+          <input
+            matInput
+            placeholder="Enter OTP"
+            ngModel
+            name="otp"
+            type ="text"
+            required
+            minlength="6"
+            maxlength="6"
+            pattern="[0-9]*"
+            formControlName="otp"
+            >
+        </mat-form-field>
+        <div class="otp-reset-container">
+            <button
+            mat-button color="basic"
+            id="sendOTP"
+            disableRipple
+            [disabled]="timer != 0"
+            type="button"
+            (click)="sendResetSessionOTP(false)"
+            i18n>
+            Resend OTP</button>
+            <P i18n>OTP Expires in
+                <span><h3>{{minutes}}:{{seconds < 10? '0' + seconds: seconds}}</h3></span>
+            </P>
+
+        </div>
+
+        <div class="lower-buttons">
+            <button
+            mat-raised-button
+            color="primary"
+            id="confirm-otp"
+            type="submit"
+            (click)="onSubmit()"
+            [disabled]="otpForm.invalid || requestOngoing"
+            i18n>
+            Validate
+            </button>
+
+            <button
+            mat-raised-button
+            color="basic"
+            id="cancel"
+            type="button"
+            (click)="onCancel()"
+            mat-dialog-close
+            i18n>
+            Cancel</button>
+        </div>
+
+      </form>
+</div>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="requestOngoing">
+  <div style="display: grid; justify-content: center; align-content: center" i18n>
+    <mat-spinner></mat-spinner>
+    Loading Account Information
+  </div>
+</mat-dialog-content>

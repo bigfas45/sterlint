@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6607177857203727204" datatype="html">
+        <source>Auto Deployment Test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4075728024309667391" datatype="html">
+        <source> Go Back </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2063843795352090549" datatype="html">
+        <source>Debit card reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="344886654980776591" datatype="html">
+        <source> Fill in the correct details below to reset your password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8852651684020835070" datatype="html">
+        <source>Enter your Internet Banking ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4417294669944308999" datatype="html">
+        <source>Enter account number linked to your debit card</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2664155155534464315" datatype="html">
+        <source>SUBMIT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6943486270557756671" datatype="html">
+        <source>CANCEL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/debitcard-reset/debitcard-reset.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="234451658559299999" datatype="html">
+        <source>Stanbic IBTC Bank</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2929429154663484214" datatype="html">
+        <source>A member of Standard Bank Group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1274686598843595771" datatype="html">
+        <source>Login to your account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1172628312903026021" datatype="html">
+        <source> New to Internet banking? <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;openAccountCreation()&quot; &gt;"/>Create account<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1965336738950684952" datatype="html">
+        <source>Internet Banking ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="903461527437833734" datatype="html">
+        <source>person</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3170698449108707215" datatype="html">
+        <source> Forgot password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1908285951500318953" datatype="html">
+        <source> Login </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1736722648685446887" datatype="html">
+        <source>Click below to visit our other businesses</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4039342043473792732" datatype="html">
+        <source>Mutual Funds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3733540394742082363" datatype="html">
+        <source>Pensions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2254507466423511022" datatype="html">
+        <source>@Ease</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5944488753746113803" datatype="html">
+        <source>Insurance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4613338085351943838" datatype="html">
+        <source>Stock</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/login/login.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4323308411968248251" datatype="html">
+        <source>Instant Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5948424872178519496" datatype="html">
+        <source>Hello, welcome to Stanbic IBTC, to create an instant account, we will need your BVN or registered phone number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6164541715213953923" datatype="html">
+        <source>Create @ease account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5337468120190926708" datatype="html">
+        <source>You will be creating a tier 1 account, enter your BVN to create your instant account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5168273175475870582" datatype="html">
+        <source>Do you have BVN?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8471050105011570191" datatype="html">
+        <source>BVN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6028371114637047813" datatype="html">
+        <source>First Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4407559560004943843" datatype="html">
+        <source>Last Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7890419814061896884" datatype="html">
+        <source>Date of Birth</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4391289919356861627" datatype="html">
+        <source>Apply</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5649666388674217187" datatype="html">
+        <source> Create Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2330577642930707695" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8194554728555410336" datatype="html">
+        <source>Phone Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3304983836659425966" datatype="html">
+        <source>Full Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3948439187870398089" datatype="html">
+        <source>Gender</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5734888861256751765" datatype="html">
+        <source>none</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7708270344948043036" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{gender}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">176,178</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="380619013932532702" datatype="html">
+        <source>Email (Optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3270504950993059455" datatype="html">
+        <source>Referral code (Optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8774167969014636291" datatype="html">
+        <source>Secret Word</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4406493224727225230" datatype="html">
+        <source> Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">222,223</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1458665178003257919" datatype="html">
+        <source> Confirm OTP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5668632685575118472" datatype="html">
+        <source> Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/registration/registration.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7564638882501567563" datatype="html">
+        <source> Pin Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2351551263054408521" datatype="html">
+        <source>Enter your Pin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pinreset/pinreset.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1636934520301910285" datatype="html">
+        <source>Reset password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6979883884229117636" datatype="html">
+        <source> Select an option from the list below.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2228664300042347390" datatype="html">
+        <source> Using Debit card </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6813597863267138856" datatype="html">
+        <source> arrow_forward_ios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7421794422132020408" datatype="html">
+        <source> Using Secretword </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3748594948669863573" datatype="html">
+        <source> Using Pin </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8890553633144307762" datatype="html">
+        <source>Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpassword/resetpassword.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3521084103654700903" datatype="html">
+        <source>Successful</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpasswordsuccessmodal/resetpasswordsuccessmodal.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2329628589050945867" datatype="html">
+        <source>Password reset was successful. A default password has been sent to your registered mobile number.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpasswordsuccessmodal/resetpasswordsuccessmodal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8707933534771423698" datatype="html">
+        <source>BACK TO LOGIN PAGE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/resetpasswordsuccessmodal/resetpasswordsuccessmodal.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3924653054970346088" datatype="html">
+        <source> Secret word reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2947393018324786783" datatype="html">
+        <source>Enter secret word</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/secretwordreset/secretwordreset.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3874635510970079510" datatype="html">
+        <source>Confirm OTP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4151503176162624912" datatype="html">
+        <source>Please input the OTP sent to your mobile number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9211665410945124545" datatype="html">
+        <source>OTP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3497431772227354039" datatype="html">
+        <source> Resend OTP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7751943751900100408" datatype="html">
+        <source>OTP Expires in <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/><x id="START_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;h3&gt;"/><x id="INTERPOLATION" equiv-text="{{minutes}}"/>:<x id="INTERPOLATION_1" equiv-text="{{seconds &lt; 10? &apos;0&apos; + seconds: seconds}}"/><x id="CLOSE_HEADING_LEVEL3" ctype="x-h3" equiv-text="&lt;/h3&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7975252153657972743" datatype="html">
+        <source> Validate </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="292211541129755531" datatype="html">
+        <source><x id="START_TAG_MAT_SPINNER" ctype="x-mat_spinner" equiv-text="&lt;mat-spinner&gt;"/><x id="CLOSE_TAG_MAT_SPINNER" ctype="x-mat_spinner" equiv-text="&lt;/mat-spinner&gt;"/> Loading Account Information </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/login-dialog/login-dialog.component.html</context>
+          <context context-type="linenumber">69,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4849839653863219423" datatype="html">
+        <source>Reset Session</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4078763406890925713" datatype="html">
+        <source>A user session already exist. Please click continue to terminate the session.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7808756054397155068" datatype="html">
+        <source>Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1812429098722823159" datatype="html">
+        <source> Verify </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/reset-session/reset-session.component.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4423881171741695850" datatype="html">
+        <source>WELCOME TO </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4315772622408579625" datatype="html">
+        <source>Internet Banking</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6777974573583289938" datatype="html">
+        <source>description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5601539287675132558" datatype="html">
+        <source>New to Standard Bank?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3787697764270430778" datatype="html">
+        <source>Open a new account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7057842999031943025" datatype="html">
+        <source>Locate us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2661273695208233879" datatype="html">
+        <source>Find the closest branch or ATM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3890066742956893223" datatype="html">
+        <source>build</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="624937659769593970" datatype="html">
+        <source>Quick Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5749310478951404260" datatype="html">
+        <source>Account modification without visiting a bank</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5220583594270690851" datatype="html">
+        <source>Download our super app</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared-component/shared.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

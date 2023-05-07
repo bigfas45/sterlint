@@ -1,0 +1,653 @@
+p,mat-form-field   {
+  font-family: "BentonSansRegular";
+}
+
+strong,
+button {
+  font-family: "BentonSansMedium";
+  font-size: 12px;
+}
+
+
+section.otherbanks-transfer-container {
+  overflow-y: auto;
+  height: 100%;
+  padding: 32px;
+
+  .loader {
+    margin-bottom: 16px;
+  }
+
+  .form-page {
+    margin-bottom: 64px;
+
+  strong {
+    font-size: 14px;
+    display: inline;
+  }
+  p#steps {
+    color: #616e88;
+    font-size: 14px;
+    margin-block: 12px;
+  }
+
+
+
+  form {
+    .form-group {
+
+      .input {
+
+        width: 100%;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &.form-field {
+          margin-top: -0.25rem;
+        }
+        mat-form-field {
+          width: 100%;
+          height: 52px;
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+      button.input-button {
+        background-color: #f2f3f5;
+        display: flex;
+        position: relative;
+        padding: 8px 16px;
+        align-items: center;
+        max-height: 50px;
+
+        &.invalid {
+          border: 2px solid red;
+        }
+
+        small {
+          position: absolute;
+          left: 4px;
+          font-size: 10.5px;
+          color: #f44336;
+        }
+
+        p {
+          font-size: 14px;
+          color: #616E88;
+          margin: 0;
+        }
+
+        mat-icon {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          right: 10px;
+        }
+      }
+
+      mat-menu {
+        margin-top: 20px;
+        max-height: 500px;
+        mat-list {
+          &.mat-list.base {
+            background-color: red;
+          }
+          .mat-list-item-content {
+            display: block !important;
+          }
+          mat-list-item {
+            height: auto !important;
+            cursor: pointer;
+
+          }
+        }
+      }
+
+      .recipient-details-wrapper {
+        grid-column: 1/-1;
+      }
+      .recepient-details {
+        background-color: #F2F3F5;
+        border-radius: 10px;
+        padding: 16px;
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        .recepient-details-profileImg {
+          width: 40px;
+          height: 40px;
+          background-color: rgba(97, 110, 136, 0.16);
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 10px;
+          }
+        }
+
+        .recepient-details-text{
+          p {
+            font-size: 14px;
+            margin-block: 15px;
+          }
+        }
+      }
+
+
+    }
+
+    .actions {
+      display: flex;
+      margin-top: 10%;
+      button {
+        width: 100%;
+        height: 42px;
+        &#confirm-otp {
+          margin-bottom: 20px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  }
+
+
+  .otp-page {
+    padding-right: 10px;
+    overflow: auto;
+    button {
+
+      &.back {
+        p {
+          margin: 0 10px;
+          display: inline-block;
+          padding: 0;
+        }
+      }
+
+
+      &#confirm-otp, &#cancel {
+        padding: 2px 15px;
+        width: 100%;
+      }
+
+      &#confirm-otp {
+        margin-right: 10px;
+        margin-bottom: 20px;
+      }
+    }
+    .otp-page-body {
+      max-width: 400px;
+      margin: 40px auto;
+
+      p, strong {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      strong:nth-child(1) {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .transaction-details {
+        padding: 18px 24px;
+        border-radius: 10px;
+        background-color: #F2F3F5;
+
+        .details-element {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+      }
+
+      #confirm-OTP {
+        display: grid;
+
+        h3 {
+          margin-bottom: 8%;
+        }
+
+        .enter-otp {
+          display: flex;
+          align-items: center;
+          margin-block: 8%;
+
+          img {
+            margin-right: 5%;
+          }
+        }
+
+        button {
+        &#sendOTP {
+          color:blue;
+          margin: 0;
+          padding: 0;
+
+          &:disabled {
+            color:rgb(179, 179, 179);
+          }
+        }
+        }
+
+
+
+
+
+
+
+        mat-form-field {
+          width: 100%;
+        }
+
+        .otp-reset-container {
+          display: flex;
+          width: 100%;
+          margin-bottom: 30px;
+          justify-content: space-between;
+          align-items: center;
+
+          strong {display: inline;}
+        }
+
+        // .otp-reset-container button {padding: 0;}
+
+        // .otp-reset-container h3{ display: inline;}
+
+      }
+    }
+  }
+}
+
+@media (width > 1050px) {
+  section {
+    &.otherbanks-transfer-container {
+      .form-page {
+        form {
+          margin-top: 50px;
+
+          .form-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-row-gap: 30px;
+            grid-column-gap: 5%;
+            margin-bottom: 5%;
+
+            .input {
+              margin: unset;
+            }
+
+            .recepient-details {
+              margin-bottom: 0;
+            }
+          }
+
+          .actions {
+            button {
+              width: auto;
+              &#confirm-otp {
+                margin-right: 4%;
+              }
+            }
+          }
+        }
+      }
+
+      .otp-page {
+        button {
+          &#confirm-otp,
+          &#cancel {
+            width:auto;
+          }
+        }}
+    }
+  }
+}
+
+@media (width > 1650px) {
+  section {
+    &.otherbanks-transfer-container {
+      .form-page {
+        form {
+          .form-group {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            // margin-top: 80px;
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+//   margin:  0 !important;
+// }
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  // color: white !important;
+  // background-color: #F2F3F5 !important;
+  border-radius: 5px;
+  margin: 0 !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline {
+  color: red !important;
+}
+
+::ng-deep .mat-menu {
+  border-radius: 10 px !important;
+  margin-top: 14px !important;
+  max-width: unset !important;
+  width: 350px;
+  max-height: 800px;
+
+
+  .mat-list-item {
+    height: auto !important;
+    cursor: pointer;
+
+    &.end {
+      .mat-list-item-content {
+        border:none;
+      }
+    }
+  }
+
+ ::ng-deep .mat-menu-content:not(:empty) {
+  max-height: 500px;
+}
+
+
+
+  .mat-list-item-content {
+    display: block  !important;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #616e8841;
+    strong {
+      font-size: 14px;
+    }
+    p {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: #616E88;
+    }
+  }
+
+
+}
+
+.blurred {
+  backdrop-filter: blur(5px);
+ background-color: rgba(0, 0, 0, 0.5);
+}
+
+button.buttonColor{
+  
+
+  * {
+    color: #0033AA !important;
+  }
+}
+
+.formP{
+  font-family: 'BentonSansMedium' !important;
+font-style: bold !important;
+font-weight: 500 !important;
+font-size: 16px !important;
+line-height: 14px !important;
+margin-bottom: 2%;
+color: #1D1D1D !important;
+}
+
+.info {
+  width: 430px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: #E6F0FC;
+  // margin-top: 33px;
+}
+
+.setLimit {
+  width: 100%;
+  display: flex;
+}
+
+.setLimit .limit {
+  padding: 2% 4%;
+    border-radius: 8px;
+    margin-bottom: 5%;
+    background-color: #f6f6f6;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.setLimit .limit.active {
+  background-color: #005CC8;
+  color: #fff;
+}
+
+
+p {
+  font-family: "BentonSansRegular";
+  font-size: 14px;
+  color: #616e88;
+  line-height: 24px;
+}
+
+strong {
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 16px;
+  font-family: "BentonSansMedium";
+}
+
+strong,
+button {
+  font-family: "BentonSansMedium";
+}
+
+button {
+  font-size: 12px;
+  height: 42px;
+  padding: 0 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficiary-otp-dialog-container {
+  .loader{
+    margin-bottom: 16px;
+  }
+  min-width: 20vw;
+  .delete-page {
+
+    button {
+      &#cancel {
+        background-color: #efefef;
+        color: #616e88;
+      }
+
+      &#delete {
+        background-color: #f24040;
+        color: #fff;
+      }
+    }
+
+    .actions {
+      margin-top: 25px;
+      display: flex;
+    }
+  }
+
+  #confirm-OTP {
+    display: grid;
+
+    h3 {
+      margin-bottom: 24px;
+    }
+
+    .enter-otp {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      img {
+        margin-right: 5%;
+      }
+    }
+
+    .mat-form-field#OTP {
+      margin-bottom: -24px;
+    }
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    #sendOTP {
+      color: blue;
+      margin: 0;
+
+      &:disabled {
+        color: rgb(179, 179, 179);
+      }
+    }
+
+    .otp-reset-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        padding: 0;
+      }
+
+      h3 {
+        display: inline;
+      }
+    }
+
+    .lower-buttons {
+      display: flex;
+      margin-bottom: 4%;
+      margin-top: 10%;
+    }
+  }
+
+  .action-status-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+
+    .icon-container {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e3eaed;
+      margin-bottom: 5%;
+
+      mat-icon {
+        &#done {
+          color: rgb(5, 150, 0);
+        }
+        &#fail {
+          color: red;
+        }
+
+        transform: scale(1.5);
+      }
+    }
+    .actions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        &#close {
+          margin-right: 30px;
+        }
+        padding: 1% 7%;
+        margin-top: 10%;
+      }
+    }
+  }
+}
+
+button#confirm-otp {
+  margin-right: 10%;
+  font-size: 12px;
+  height: 42px;
+}
+
+button#cancel {
+  font-size: 12px;
+  height: 42px;
+  margin-right: 24px;
+}
+
+@media (max-width: 700px) {
+  mat-dialog-content {
+    padding: 8% 8%;
+  }
+  .lower-buttons {
+    display: block;
+  }
+}
+
+mat-dialog-container {
+  padding: 58px 60px !important;
+  border-radius: 20px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  // background-color: #EFEFEF !important;
+  border-radius: 5px;
+  margin: 0 !important;
+}
+
+ .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline {
+  color: red !important;
+}
+
+.requestSuccessful {
+  text-align: center;
+  width: 100%;
+}
+.requestSuccessful > .title {
+  margin-block: 30px;
+}
+
+.requestSuccessful > button {
+  margin-top: 30px;
+}
+
+.title {
+  font-family: 'BentonSans Bold', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 0;
+  color: #1D1D1D;
+  padding-inline: 24px;
+}
+
+
+

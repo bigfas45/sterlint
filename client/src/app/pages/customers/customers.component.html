@@ -1,0 +1,77 @@
+<main>
+    <app-header [title]="'Customers'"></app-header>
+  <section>
+        <mat-toolbar>
+            <input type="text" placeholder="Search for customers" class="search-field" >
+            <span class="example-spacer"></span>
+
+            <button class="download-button" mat-button>
+                Download Customers Report
+            </button>        
+        </mat-toolbar>
+    </section>
+    
+    <section class="container-flex">
+        <div class="container-flex-child child1">
+            <div class="flex-child-title">
+                Analysis
+            </div>
+
+            <div class="flex-child-title-value">
+                200,000
+            </div>
+            <h5>
+                Total number of customers
+            </h5>
+
+
+            <section>
+
+            </section>
+        </div>
+        <div class="container-flex-child child2">
+            <div class="flex-child-title">
+                Customers
+            </div>
+
+            <div>
+                <table class="example-list"  style="width: 100%;" class="ui compact celled definition table"  >
+                    <thead  class="table-head">
+                        <tr>
+                            <th id="table-userid" class="table-title">USER ID</th>
+                            <th id="table-firstname" class="table-title">FIRST NAME</th>
+                            <th id="table-lastname" class="table-title">LAST NAME</th>
+                            <th id="table-numberdevices" class="table-title">NUMBER OF DEVICES</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+            
+                        <tr class="border-bottom" *ngFor="let control of customerList" >
+            
+                            <td>
+                                <div>
+                                    89092536627899
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Olayemi
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Fayogbemi
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    3 &nbsp;&nbsp;&nbsp;<button class="view-devices" mat-button>View Devices</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>

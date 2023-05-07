@@ -1,0 +1,55 @@
+<main>
+    <app-header [title]="'Push Notifications'"></app-header>
+    <!-- <section>
+        <mat-toolbar>
+            <span>Dashboard</span>
+            <input type="text" placeholder="Search" class="search-field" (input)="search($event)">
+            <button (click)="addAppControl()" mat-button>
+               <img src="../../../assets/add-icon.png" alt="" style="width: 17px;"> &nbsp;&nbsp; Add New App
+            </button>        
+        </mat-toolbar>
+    </section> -->
+    <div class="flex-container">
+        <div class="flex-child-1">
+            
+
+        </div>
+        <div class="flex-child-2">
+            <div class="manage-adv-title">
+                <button class="add-button" mat-button routerLink="/dashboard/push-notifications-create-notification">
+                    <img src="../../../assets/add-icon.png" alt="" style="width: 17px;"> &nbsp;&nbsp; Create New Promotion
+                 </button> 
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="push-notification-title">
+            Current Promotion
+        </div>
+        <div *ngFor="let data of promotionsList">
+            <div class="promotion-item">
+                <div>
+                    <div class="promotion-item-title">
+                        Christmas
+                    </div>
+                    <div class="promotion-item-sub-title">
+                        iOS 20k users
+                    </div>
+                </div>
+                <div style="flex: 1"></div>
+                <button mat-button class="view-analytics" routerLink="/dashboard/push-notifications-view-analytics">
+                    View Analytics
+                </button>
+
+                <button mat-button class="status-drop-down">
+                    Active
+                </button>
+
+                <button mat-button class="trash-icon-btn" >
+                    <mat-icon style="color: rgb(202, 49, 54);">restore_from_trash</mat-icon>
+                </button>
+                
+            </div>
+        </div>
+    </section>
+</main>

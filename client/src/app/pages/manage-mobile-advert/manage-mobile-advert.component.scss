@@ -1,0 +1,94 @@
+main{
+    background: #fcfcfc;
+}
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+.sub-flex-container {
+    display: flex;
+}
+
+.flex-child-1 {
+    flex: 1;
+    padding-left: 20px;
+    // height: 100vh;
+}
+
+.flex-child-2 {
+    flex: 1.5;
+    padding-left: 20px;
+    padding-right: 20px;
+    // height: 100vh;
+}
+
+.list-flex-container{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #444;
+}
+
+.list-flex-container:hover{
+    background: rgba(0, 137, 255, 0.08);
+    .list-name{
+        font-weight: bold;
+    }
+}
+
+.img-flex-container{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.activeList{
+    background: rgba(75, 177, 240, 0.777);
+}
+.adv-img-holder{
+    height: 240px;
+    width: 200px;
+    background: url('../../../assets/default-ads.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid #f5f5f5;
+    
+}
+
+
+.manage-adv-title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.child-1-summary-container{
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+.child-2-summary-container{
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+
+}
+
+button{
+    background: #0033AA;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    width: 200px;
+    border-radius: 5px;
+}

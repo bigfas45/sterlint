@@ -1,0 +1,63 @@
+@use "../../../../variables" as vrbles;
+
+.card-options-wrapper {
+  width: 100%;
+  @include vrbles.section($tempRows: "", $tempColum: repeat(3, 1fr));
+  margin-top: 5%;
+}
+
+mat-card {
+  @include vrbles.cardDefinition();
+}
+
+// Shared card option class styling
+.card-option {
+  grid-column: span 1;
+  height: 60%;
+  min-height: 450px;
+  display: flex;
+  align-items: flex-end;
+
+  // Card track history styling
+  &.track-progress {
+    position: relative;
+    margin-bottom: 15%;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  button {
+    padding: 1% 4%;
+    margin-top: 5%;
+  }
+
+  h1 {
+    width: 80%;
+  }
+
+  &.progress {
+    margin: 0 0 20%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .card-options-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 1279px) {
+  .card-options-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 954px) {
+  .card-options-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

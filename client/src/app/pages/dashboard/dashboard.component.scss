@@ -1,0 +1,142 @@
+mat-toolbar{
+    background: #fff;
+}
+
+span{
+  cursor: pointer;
+}
+
+.search-field{
+    padding: 10px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #f5f5f5f5;
+    font-size: 14px;
+}
+.example-spacer {
+    flex: 1 auto;
+    width: 40%;
+}
+
+button{
+    background: #0033AA;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    width: 160px;
+    border-radius: 5px;
+    padding: 4px;
+
+}
+
+
+img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.table-container{
+    // border: 1px solid #ccc;
+    margin: 10px;
+    overflow: scroll;
+    height: 75vh;
+    border-radius: 10px;
+    // background: #f5f5f5;
+}
+
+.loading-container{
+    text-align: center; width: fit-content; margin: auto;
+    padding-top: 30px;
+    div{
+        padding-top: 10px;
+        font-weight: bold;
+    }
+}
+
+.table-title{
+        padding: 5px;
+        font-weight: normal;
+        color: rgba(68, 68, 68, 0.79);
+        text-align: left;
+
+
+
+}
+
+.table-head{
+    // background: red;
+}
+
+td{
+    div{
+        padding: 5px;
+        padding-bottom: 22px;
+        padding-top: 22px;
+        font-weight: normal;
+    }
+
+    .td-url{
+        color: #0089FF;
+    }
+
+    .td-regular{
+        color: #444444;
+        
+    }
+
+    .td-value{
+
+        // width: 40px;
+        // height: 14px;
+        // font-family: 'BentonSans Regular';
+        // font-style: normal;
+        // font-weight: 400;
+        // font-size: 14px;
+        // line-height: 14px;
+        // color: #000;
+    }
+}
+
+tr.border-bottom td {
+    border-bottom: 1pt solid #f3f3f3;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+#table-no{
+
+    // width: ;
+}
+#table-app-name{
+    width: 10%;
+}
+#table-app-url{
+    width: 20%;
+}
+#table-app-menu-name{
+    width: 20%;
+}
+#table-app-route{
+    width: 20%;
+}
+#table-status{
+    width: 8%;
+}
+#table-action{
+    width: 5%;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: rgba(45, 167, 76, 0.8);
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+:host ::ng-deep  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #fff;
+}

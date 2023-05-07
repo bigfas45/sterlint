@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    font-family: "BentonSansRegular";
+    box-sizing: border-box !important;
+  }
+  
+  
+  main {
+    overflow-y: hidden !important;
+    padding: 0 32px;
+  
+    .body {
+      background: var(--cardMgt-backgroundColour);
+      color: var(--cardMgt-PrimaryText);
+      overflow-y: hidden;
+      overflow-x: hidden !important;
+    }
+  }
+  
+  
+  
+  
+  
+  

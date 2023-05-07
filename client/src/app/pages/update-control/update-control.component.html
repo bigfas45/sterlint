@@ -1,0 +1,172 @@
+
+<main class="update-main">
+    <app-header [title]="'Update App Control'" ></app-header>
+    <section>
+        <button routerLink="/dashboard" mat-button style="border: 1px solid #fefefe;">
+            <mat-icon>arrow_back</mat-icon>&nbsp;&nbsp; back
+        </button>
+    </section>
+    <section>
+
+
+        <div class="flex-container">
+            <mat-card class="flex-child form-section">
+                <div class="card-title">
+                    Update Control
+                </div>
+
+
+                <form [formGroup]="controlForm">
+
+
+                    <p class="formlabel">
+                        App Name
+                    </p>
+                    <input type="text" formControlName="appName" >
+    
+                    <p class="formlabel">
+                        App URL
+                    </p>
+                    <input type="text" formControlName="appURL" >
+    
+                    <p class="formlabel">
+                        App Menu Name
+                    </p>
+                    <input type="text" formControlName="appMenuName" >
+    
+                    <p class="formlabel">
+                        App Route
+                    </p>
+                    <input type="text" formControlName="appRoute" >
+    
+                    <p class="formlabel">
+                        App Icon
+                    </p>
+                    <input type="text" formControlName="appIcon" >
+
+
+                    <p class="formlabel">
+                        Type
+                    </p>
+                    <!-- <div style="border: 1px solid #ddd; padding:5px">
+                        <mat-radio-group formControlName="type">
+                            <mat-radio-button color='primary' value="retail">Retail</mat-radio-button>
+                            <mat-radio-button color='primary' value="SME">EOL</mat-radio-button>
+                            <mat-radio-button color='primary' value="retailSME">Retail & EOL</mat-radio-button>
+                            <mat-radio-button color='primary' value="EOLApproval">EOL Approval</mat-radio-button>
+                        </mat-radio-group>
+                    </div> -->
+
+                </form>
+
+                    
+                    <table>
+                        <tr>
+                            <td style="width: 300px;">
+                                <div class="radio-input-div">
+                                    <mat-checkbox color='primary' [(ngModel)]="IsRetail" value="" class="example-margin">Retail</mat-checkbox>
+                                </div>
+                            </td>
+                            <td style="width: 300px;">
+                                <div class="radio-input-div">
+                                    <mat-checkbox color='primary' [(ngModel)]="IsSME" value="" class="example-margin">EOL</mat-checkbox>
+                                </div>
+                            </td>
+                            <td style="width: 300px;">
+                                <div class="radio-input-div">
+                                    <mat-checkbox color='primary' [(ngModel)]="IsEOLApproval" value="" class="example-margin">EOL Approval</mat-checkbox>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <button class="button-default" *ngIf="isLoadingUpdateBtn == false" mat-button (click)="updateAppControl()">
+                            Update
+                    </button>
+                    <button class="button-loading" *ngIf="isLoadingUpdateBtn == true" mat-button >
+                        <mat-spinner diameter="30"></mat-spinner>
+                    </button>
+
+
+            </mat-card>
+            <mat-card class="flex-child image-section">
+                <div class="card-title">
+                    Sub Features
+                </div>
+
+             
+                <div *ngIf="isLoadingFeatures == true" class="loading-container">
+                    <mat-spinner></mat-spinner>
+                    <div>
+                        Loading values...
+                    </div>
+                </div>
+
+                <div *ngIf="isLoadingFeatures == false">
+                    <div *ngIf="featuresInfo.length == 0" class="sub-feature-empty">
+                        No sub features. <br>
+                        To add feature, click on the button below.
+                    </div>
+                    <div *ngIf="featuresInfo.length != 0">
+                        <div class="sub-feature-NotEmpty">
+                            <table>
+                                <tr>
+                                    <td class="sub-feature-title">
+                                        <div>
+                                            Name
+                                        </div>
+                                    </td>
+                                    <td class="sub-feature-title">
+                                        <div>
+                                            Route
+                                        </div>
+                                    </td>
+                                    <td class="sub-feature-title">
+                                        <div>
+                                            Edit
+                                        </div>
+                                    </td>
+                                    <td class="sub-feature-title">
+                                        <div>
+                                            Delete
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <tr  *ngFor="let featureData of featuresInfo" cdkDrag>
+                                        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                        
+                                        <td>
+                                            <div>
+                                                {{featureData.featureName}} 
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                {{featureData.featureRoute}}
+                                            </div>
+                                        </td>
+                        
+                                        <td class="collapsing">
+                                            <div (click)="updateSubFeatureOpenDialog(featureData)">        
+                                                <img src="../../../assets/edit.png" alt="">
+                                            </div>                 
+                                        </td>
+                                        <td class="collapsing">
+                                            <div (click)="deleteSubFeatureOpenDialog(featureData.featureId)">
+                                                <img src="../../../assets/delete.png" alt="">
+                                            </div>                 
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="button-default" (click)="addsubfeatureOpenDialog()" mat-button>Add feature</button>
+
+            </mat-card>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+
+@import url('swiper/swiper.scss');
+@import url('swiper/swiper-bundle.css');
+@import url('swiper/modules/navigation/navigation.scss');
+
+@import url('swiper/modules/pagination/pagination.min.css');
+
+
+@import "./theme-styles/_darkTheme.css";
+@import "./theme-styles/_lightTheme.css";
+
+
+// .blurredDialogBackground {
+//   backdrop-filter: blur(5px);
+//  background-color: rgba(0, 0, 0, 0.5);
+// }
+
+.swiper-button-prev, .swiper-button-next {
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background linear 500ms;
+  border-radius: 100%;
+  background: #3f51b5;
+  color: white;
+  top: calc(50% - 15px);
+  height: 30px;
+  width: 30px;
+
+  &:hover {
+    opacity: .7;
+    transition: opacity linear 500ms;
+  }
+}
+
+.swiper-button-prev::after {
+  content: '◀';
+  font-size: 2em;
+}
+.swiper-button-next::after {
+  content: '▶';
+  font-size: 2em;
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+

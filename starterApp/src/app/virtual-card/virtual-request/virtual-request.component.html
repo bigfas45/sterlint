@@ -1,0 +1,398 @@
+<section class="otherbanks-transfer-container">
+  <div class="loader" *ngIf="loaderIsActive">
+    <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
+  </div>
+  <div class="form-page">
+    <strong *ngIf="stepper !=4">Fill all input field</strong>
+    <p id="steps" *ngIf="stepper !=4">Step 1 of {{ stepper }}</p>
+
+    <form [formGroup]="virtualCard" autocomplete="off">
+      <p class="formP" *ngIf="stepper === 1">Select preferred card type</p>
+      <div class="form-group" *ngIf="stepper === 1">
+        
+        <button
+          mat-button
+          class="input input-button select-account"
+          [ngClass]="{ buttonColor: variant === 'variant1' }"
+          (click)="setVariant('variant1')"
+          type="button"
+        >
+          <p>Single use</p>
+          <mat-icon *ngIf="variant === 'variant1'"
+            >check_circle_outline</mat-icon
+          >
+          <small>Please select an account</small>
+        </button>
+
+        <button
+          (click)="setVariant('variant2')"
+          [ngClass]="{ buttonColor: variant === 'variant2' }"
+          mat-button
+          class="input input-button recepient-bank"
+          type="button"
+        >
+          <p>Multiple use</p>
+          <mat-icon *ngIf="variant === 'variant2'"
+            >check_circle_outline</mat-icon
+          >
+          <small>Please select a bank</small>
+        </button>
+      </div>
+
+      <div *ngIf="stepper === 1">
+        <p class="formP">Select preferred currency</p>
+        <div class="form-group">
+          <button
+            mat-button
+            class="input input-button select-account"
+            [ngClass]="{ buttonColor: currency === '840' }"
+            (click)="setCurrency('840')"
+            type="button"
+            *ngIf="isDomiciliary"
+          >
+            <p>US Dollars ($)</p>
+            <mat-icon *ngIf="currency === '840'">check_circle_outline</mat-icon>
+            <small>Please select an account</small>
+          </button>
+
+          <button
+            (click)="setCurrency('566')"
+            [ngClass]="{ buttonColor: currency === '566' }"
+            mat-button
+            class="input input-button recepient-bank"
+            type="button"
+          >
+            <p>Nigerian Naira (₦)</p>
+            <mat-icon *ngIf="currency === '566'">check_circle_outline</mat-icon>
+            <small>Please select a bank</small>
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="stepper === 2">
+        <p class="formP">Select preferred card type</p>
+
+        <div class="form-group">
+          <button
+            mat-button
+            class="input input-button select-account"
+            [ngClass]="{ buttonColor: cardType === 'VERVE_VIRTUAL' }"
+            (click)="setCardType('VERVE_VIRTUAL')"
+            type="button"
+            *ngIf="!isDollarSelect"
+          >
+            <p>Verve</p>
+            <mat-icon *ngIf="cardType === 'VERVE_VIRTUAL'"
+              >check_circle_outline</mat-icon
+            >
+            <small>Verve</small>
+          </button>
+
+          <button
+            (click)="setCardType('MASTERCARD_VIRTUAL')"
+            [ngClass]="{ buttonColor: cardType === 'MASTERCARD_VIRTUAL' }"
+            mat-button
+            class="input input-button recepient-bank"
+            type="button"
+           
+          >
+            <p>Mastercard</p>
+            <mat-icon *ngIf="cardType === 'MASTERCARD_VIRTUAL'"
+              >check_circle_outline</mat-icon
+            >
+            <small>Mastercard</small>
+          </button>
+        </div>
+
+        <p class="formP">Enter preferred name on card*</p>
+
+        <div class="form-group">
+          <div class="input form-field  recepient-account-no">
+            <mat-form-field appearance="outline" id="account">
+              <mat-label>Enter name here</mat-label>
+              <input
+                matInput
+                type="text"
+                placeholder="Enter name here"
+                formControlName="nameOnCard"
+              
+              />
+              <mat-error>
+                Please enter a valid account
+              </mat-error>
+  
+           
+            </mat-form-field>
+          </div>
+  
+        </div>
+
+        <div class="form-group" >
+          <div class="input form-field  recepient-account-no">
+         
+
+              <mat-form-field appearance="outline" id="account" style="max-width: 462px">
+
+              <mat-label> Select Account Number </mat-label>
+              <mat-select formControlName="accountId">
+                <mat-option
+                  *ngFor="let account of accountFilters"
+                  [value]="account.accountNumber"
+                >
+                 {{ account.accountNumber }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+    
+          </div>
+
+          <div class="input form-field  recepient-account-no">
+         
+
+            <mat-form-field style="max-width: 362px"  *ngIf="isDollarSelect">
+              <mat-label> Select Dollar Account Number </mat-label>
+              <mat-select formControlName="AccountNumberToDebitForUSD">
+                <mat-option
+                  *ngFor="let account of accountDollarFilters"
+                  [value]="account.accountNumber"
+                >
+                {{ account.accountNumber }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+  
+        </div>
+
+
+        <div class="form-group" >
+
+          <div class="info">
+       
+            <mat-icon style="margin-right: 10px">report_problem</mat-icon>
+            <span
+              >We’d charge N500 + N37.50(7.5% vat) = N537.50 for naira denominated
+              card
+            </span>
+          </div>
+  
+        </div>
+
+      </div>
+
+
+      <div *ngIf="stepper === 3">
+        <p class="formP">Select transaction limit</p>
+        <div class="form-group" style="margin-top: -50px" >
+
+          <div class="input form-field  recepient-account-no">
+            <mat-form-field appearance="outline" id="account">
+              <mat-label>Enter your transaction limit</mat-label>
+              <input
+                matInput
+                type="number"
+                formControlName="transactionLimit"
+                placeholder="Please enter your transaction limit"
+                maxlength="10"
+                minlength="10"
+              />
+              <mat-error>
+                Please enter a valid transaction limit
+              </mat-error>
+  
+           
+            </mat-form-field>
+          </div>
+        </div>
+   
+
+
+        <div style="margin-top: -24px">
+          <p class="formP" >You can choose from the options below</p>
+
+          <div class="form-group" >
+            <div class="setLimit">
+              <div
+                class="limit"
+                [ngClass]="activeSelection == i ? 'active' : ''"
+                *ngFor="let limit of setTransLimit; let i = index"
+                (click)="seFormLimit(limit, i)"
+              >
+                 {{ limit }}
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      
+
+      </div>
+
+      <div class="actions" *ngIf="stepper !=4">
+        <button
+          mat-flat-button
+          color="primary"
+          id="confirm-otp"
+          type="button"
+          [disabled]="loaderIsActive || disableButton() "
+          (click)="onNext()"
+        >
+          NEXT
+        </button>
+
+        <button
+          mat-stroked-button
+          id="cancel"
+          type="button"
+          [disabled]="loaderIsActive"
+          (click)="onBack()"
+        >
+          Back
+        </button>
+      </div>
+
+      <div class="requestSuccessful" *ngIf="stepper === 4">
+        <div>
+          <svg
+            width="74"
+            height="70"
+            viewBox="0 0 74 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M73.6668 35L65.5335 25.7L66.6668 13.4L54.6335 10.6667L48.3335 0L37.0002 4.86667L25.6668 0L19.3668 10.6333L7.3335 13.3333L8.46683 25.6667L0.333496 35L8.46683 44.3L7.3335 56.6333L19.3668 59.3667L25.6668 70L37.0002 65.1L48.3335 69.9667L54.6335 59.3333L66.6668 56.6L65.5335 44.3L73.6668 35ZM30.6335 50.7333L17.9668 38.0333L22.9002 33.1L30.6335 40.8667L50.1335 21.3L55.0668 26.2333L30.6335 50.7333Z"
+              fill="#005CC8"
+            />
+          </svg>
+        </div>
+
+        <div class="title">Virtual Card Requested Successfully</div>
+
+        <div>
+          A Virtual card has been successfully requested and your card would be
+          created in about 10 mins. See Virtual Card Management for card details
+        </div>
+
+        <div>Your Pin is <strong>{{cardPin}}</strong>,  kindly reset your pin before using the card</div>
+
+
+
+        <button class="primaryButton"  (click)="done()">See Card Details</button>
+      </div>
+
+      
+    </form>
+  </div>
+</section>
+
+
+<ng-template #otpModal>
+  <section class="beneficiary-otp-dialog-container">
+    <div class="loader" *ngIf="loaderIsActive">
+      <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
+    </div>
+ 
+  
+  
+  
+    <div  id="confirm-OTP" >
+      <h3>Confirm OTP</h3>
+      <div class="enter-otp">
+          <img [src]="'images/smartphone 1.png' | assetUrl" alt="Phone">
+          <p>Please input the OTP sent to your mobile number</p>
+      </div>
+      <form class="otp-form-group"  #otpForm = ngForm [formGroup]="otpFormGroup">
+          <mat-form-field id="OTP" appearance="outline">
+            <mat-label>OTP</mat-label>
+            <input
+              matInput
+              placeholder="Enter OTP"
+              formControlName="otp" 
+              name="otp"
+              type="text"
+              required
+              minlength="6"
+              maxlength="6"
+              (keypress)="numberOnly($event)"
+              >
+          </mat-form-field>
+          <div class="otp-reset-container">
+              <button
+              mat-button color="basic"
+              id="sendOTP"
+              disableRipple
+              [disabled]=""
+              type="button"
+              (click)="ResendOtp()"
+              
+              >
+              Resend OTP</button>
+              <P>OTP Expires in
+                <span><h3>{{minutes}}:{{seconds < 10? '0' + seconds: seconds}}</h3></span>
+              </P>
+  
+          </div>
+  
+          <div class="lower-buttons">
+              <button
+              mat-flat-button
+              color="primary"
+              id="confirm-otp"
+              type="submit"
+              (click)="onValidateOTP()"
+              [disabled]=""
+              >
+              CONFIRM
+              </button>
+  
+              <button
+              mat-stroked-button
+              color="basic"
+              id="cancel"
+              type="button"
+              
+              mat-dialog-close
+              >
+              CANCEL</button>
+          </div>
+  
+        </form>
+  </div>
+  
+  
+
+  </section>
+  
+</ng-template>
+
+
+<div class="requestSuccessful" *ngIf="stepper === 4">
+  <div>
+    <svg
+      width="74"
+      height="70"
+      viewBox="0 0 74 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M73.6668 35L65.5335 25.7L66.6668 13.4L54.6335 10.6667L48.3335 0L37.0002 4.86667L25.6668 0L19.3668 10.6333L7.3335 13.3333L8.46683 25.6667L0.333496 35L8.46683 44.3L7.3335 56.6333L19.3668 59.3667L25.6668 70L37.0002 65.1L48.3335 69.9667L54.6335 59.3333L66.6668 56.6L65.5335 44.3L73.6668 35ZM30.6335 50.7333L17.9668 38.0333L22.9002 33.1L30.6335 40.8667L50.1335 21.3L55.0668 26.2333L30.6335 50.7333Z"
+        fill="#005CC8"
+      />
+    </svg>
+  </div>
+
+  <div class="title">Virtual Card Requested Successfully</div>
+
+  <div>
+    A Virtual card has been successfully requested and your card would be
+    created in about 10 mins. See Virtual Card Management for card details
+  </div>
+
+  <div>Your Pin is <strong>{{cardPin}}</strong>,  kindly reset your pin before using the card</div>
+
+
+
+  <button class="primaryButton"  (click)="done()">See Card Details</button>
+</div>

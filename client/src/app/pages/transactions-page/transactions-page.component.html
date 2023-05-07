@@ -1,0 +1,75 @@
+<main>
+    <app-header [title]="'Transactions'"></app-header>
+  <section>
+        <mat-toolbar>
+            <input type="text" placeholder="Search for customers or account" class="search-field" >
+            <span class="example-spacer"></span>
+
+            <button class="download-button" mat-button>
+                Download Transactions Report
+            </button>        
+        </mat-toolbar>
+    </section>
+    
+    <section class="container-flex">
+        <div class="container-flex-child child2">
+            <div>
+                <table class="example-list"   class="ui compact celled definition table"  >
+                    <thead  class="table-head">
+                        <tr>
+                            <th id="table-date" class="table-title">DATE</th>
+                            <th id="table-source" class="table-title">SOURCE ACCOUNT</th>
+                            <th id="table-amount" class="table-title">AMOUNT</th>
+                            <th id="table-type" class="table-title">TRANSFER TYPE</th>
+                            <th id="table-customer" class="table-title">CUSTOMER ID</th>
+                            <th id="table-dest-acount" class="table-title">DEST. ACCOUNT</th>
+                            <th id="table-dest-bank" class="table-title">DEST. BANK</th>
+                        </tr>
+                    </thead>
+                    <tbody cdkDropList >
+            
+                        <tr class="border-bottom" *ngFor="let control of transactionList" cdkDrag >
+                            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            
+                            <td>
+                                <div>
+                                    Jan 12, 2021 16:32
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    00324467263
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    N20,000
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    TRANSFER
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    889012WED
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    3066700525
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    FIRST BANK NIG.
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>

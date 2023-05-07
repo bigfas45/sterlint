@@ -1,0 +1,15 @@
+<!-- <router-outlet></router-outlet> -->
+
+
+
+<main >
+    <section class="flex-container">
+        <section *ngIf="isSessionActive == true" class="flex-sidebar">
+            <app-sidebar></app-sidebar>
+        </section>
+        <section class="flex-child">
+        
+            <router-outlet></router-outlet>
+        </section>    
+    </section>
+</main>

@@ -1,0 +1,38 @@
+<nav mat-tab-nav-bar class="tab-container-desktop">
+  <a
+    mat-tab-link
+    class="link"
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive="active"
+  >
+  {{link.name}}
+  </a>
+</nav>
+
+<nav class="tab-container-mobile">
+  <!-- <mat-form-field appearance="outline">
+    <mat-label></mat-label>
+    <mat-select [(value)] = "selectedLink">
+      <mat-option [value]="link.link" *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive="active" (click) = "changeLink(link)">{{ link.name }}</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <div class="select-element">
+    <select name="modules" id="module" (change)="changeLink()" [(ngModel)] = "selectedGroupLink" >
+
+      <optgroup *ngFor="let module of modules" label={{module.name}} >
+
+      <option *ngFor="let subModule of module.subModules" [value] = "subModule.link" >
+        <button>{{subModule.name}}</button>
+        </option>
+
+      </optgroup>
+
+
+      </select>
+      <mat-icon>expand_more</mat-icon>
+  </div>
+
+
+  <p>select a module</p>
+</nav>

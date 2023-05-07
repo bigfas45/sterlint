@@ -1,0 +1,13 @@
+html[data-theme='dark'] {
+    --auth-backgroundColour: #202020;
+    --auth-PrimaryText: #ffffff;
+
+    --auth-SecondaryText: #ffffff;
+
+    --auth-alternateBackground: #323232;
+    --auth-border: #323232;
+
+
+    --auth-cardBackground: #323232;
+    --auth-cardText: #ffffff;
+}

@@ -1,0 +1,85 @@
+<div class="main-wrapper">
+  <!-- Cards Slider -->
+  <div *ngIf="loaderIsActive">
+    <mat-progress-bar mode="indeterminate" color="{{'primary'}}"></mat-progress-bar>
+  </div>
+
+  <div class="cards-wrapper">
+    <div class="cards-container snaps" >
+
+    <swiper
+    *ngIf="config"
+    #swiperRef
+    [config]="config"
+  >
+    <ng-template swiperSlide *ngFor="let card of cardVirtuals; let i = index">
+
+   
+
+
+      <mat-card
+        class="card mat-elevation-z0"
+        [style.backgroundImage]="'url(' + ('images/' + 'debitcard.png' | assetUrl) + ')'"
+        (click)="onCardManage(card, i)"
+
+      >
+
+        <mat-card-content>
+          <div class="type-container">
+            <strong>{{ card.carD_PROGRAM }}</strong>
+            <img [src]="'icons/card-chip.png' | assetUrl" alt="" />
+          </div>
+          <div class="pin-container">
+            <h2>  <span *ngIf="!show"> {{card.pan | cardFormart: 'cf' }} </span>
+              <span *ngIf="show && showId=== card.apP_ID"> {{card.pan | cardFormart: 'cfs' }} </span>
+              <span *ngIf="show && showId!== card.apP_ID"> {{card.pan | cardFormart: 'cf' }} </span>
+          </h2>
+            <mat-icon
+            (click)="showCardDetails(card.apP_ID)"
+              >visibility_off</mat-icon
+            >
+          </div>
+
+          <div class="virtualCardRow">
+            <div class="cardRow">
+              <p id="validity">VALID THROUGH</p>
+              <div *ngIf="!show">**/**</div>
+              <div *ngIf="show && showId=== card.apP_ID">{{card.expirY_DATE | cardFormart: 'df' }}</div>
+              <span *ngIf="show && showId!== card.apP_ID"> **/**</span>
+            </div>
+            <div class="cardRow" style="margin-top: 20px">
+              <span class="cardRowSpace">CVV </span>
+              <div  *ngIf="!show">***</div>
+              <div  *ngIf="show && showId=== card.apP_ID">{{card.cvv }}</div>
+              <span *ngIf="show && showId!== card.apP_ID"> ***</span>
+            </div>
+          </div>
+
+
+          <div class="virtualCardRow" style="margin-top: 20px">
+            <div>
+              <div>{{card.namE_ONCARD}}</div>
+            </div>
+            <div>
+  
+           
+  
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+   
+
+ 
+  
+
+  </ng-template>
+</swiper>
+</div>
+</div>
+
+  <!-- Container for card-options/manage-cards component -->
+  <div class="card-options-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

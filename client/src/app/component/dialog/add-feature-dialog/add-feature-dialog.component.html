@@ -1,0 +1,23 @@
+<main>
+    <h2 mat-dialog-title>
+        Add Sub-feature
+    </h2>
+    <form [formGroup]="controlSubFeatureForm">
+        <mat-dialog-content class="dialog-content">
+    
+            <span>Sub Feature Name</span>
+            <input type="text" formControlName="featureName" placeholder="Sub Feature Name" class="search-field"><br>
+            <span>Sub Feature Route</span>
+            <input type="text" formControlName="featureRoute" placeholder="Sub Feature Route" class="search-field"><br>
+    
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button class="continue-btn" mat-button (click)="addSubFeature()">
+                Add
+            </button>
+            <button mat-button mat-dialog-close="cancel">
+                Cancel
+            </button>
+        </mat-dialog-actions>
+    </form>
+</main>

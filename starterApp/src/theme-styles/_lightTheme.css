@@ -1,0 +1,13 @@
+html[data-theme='light'] {
+    --home-backgroundColour: #E5E5E5;
+    --home-PrimaryText: #1D1D1D;
+    --home-SecondaryText: #616E88;
+
+    --home-alternateBackground: #EDEDED;
+    --home-border: #E5E5E5;
+
+    --home-cardBackground: #f1f1f1;
+    --home-cardText: #1D1D1D;
+
+    --input-boarder: #F2F3F5
+}

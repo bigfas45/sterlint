@@ -1,0 +1,48 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+span{
+  cursor: pointer;
+}
+
+.search-field{
+    padding: 10px;
+    width: 100%;
+}
+
+.logo-img{
+  background: url('../../../assets/logo.png') no-repeat center;
+  background-size: contain;
+  // margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+// mat-form-field{
+//     width: 100%;
+// }
+
+
+// .mat-form-field-appearance-outline .mat-form-field-outline {
+//     color: #000 !important;
+//     background: #fff !important;
+
+//   }
+//   /* Font color */
+//   input.mat-input-element {
+//     color: #000 !important;
+//     background: #fff !important;
+
+//   }
+
+//   mat-form-field {
+//     color: #000 !important;
+//     background: #fff !important;
+
+//     .mat-hint, input, ::placeholder, .mat-form-field-label {
+//         color: #000 !important;
+//         background: #fff !important;
+
+//     }
+//   }

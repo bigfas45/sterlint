@@ -1,0 +1,188 @@
+<mat-card class="mat-elevation-z0" *ngIf="cardActive">
+  <div *ngIf="loaderIsActive">
+    <mat-progress-bar mode="indeterminate" color="{{'primary'}}"></mat-progress-bar>
+  </div>
+  <mat-card-content>
+
+    <!-- Card management title -->
+    <div class="title">
+      <h3>{{cardDetails.namE_ONCARD }} </h3>
+      <p> {{cardDetails.pan | cardFormart: 'cfs' }}</p>
+    </div>
+    <button class="mat-elevation-z0" id="cancel" mat-mini-fab color="basic" aria-label="cancel" disableRipple = true>
+      <mat-icon
+        routerLink="../.."
+      >close</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <!-- List of card management options -->
+    <mat-selection-list [multiple]="false" [(ngModel)] = "cardManageOptions" class="management-list">
+      <mat-list-option
+      *ngFor="let list of listItems; let i = index" disableRipple = true
+      (click) = "onChangeCardManageOpt(list)"
+      [value]="list"
+      [selected]="list && i == 0"
+      [ngClass]="{'selected': selectedItem === list}"
+
+      >
+        {{list}}
+        <mat-icon *ngIf="selectedItem === list">
+          chevron_right
+        </mat-icon>
+
+      </mat-list-option>
+    </mat-selection-list>
+
+  <!-- List of card management options on smaller screens -->
+  <mat-form-field class="select-dropdown">
+    <mat-label>Select an Option</mat-label>
+    <mat-select placeholder="Select Manage  Option">
+        <mat-option
+          *ngFor="let list of listItems"
+          [value]="list"
+          (click) = "onChangeCardManageOpt(list)"
+          >
+          {{list}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+<!-- Card management form fields -->
+  <form
+    [formGroup] ="changePinForm" (ngSubmit) = "cardFormSubmit($event)"
+    *ngIf="cardManageOptions == 'Change Pin'"
+    >
+    <div class="form-group">
+
+
+        <div class="input-password">
+            <mat-form-field
+                appearance="outline"
+                id = 'new-password'>
+                <mat-label>New Password</mat-label>
+                <input
+                 matInput
+                 [type]= "visibilityStatus "
+                 placeholder="New Password"
+                 formControlName = "newPassword"
+                 minlength="5"
+                 maxlength="5"
+                 pattern="[0-9]*"
+                 required
+
+                 >
+            </mat-form-field>
+            <mat-icon
+            matSuffix
+            (click) = "onVisibilityChange('newPassword')"
+            style="cursor: pointer;"
+            id="visibility"
+            >
+            {{visibilityStatus == "password"? "visibility_off": "visibility"}}
+            </mat-icon>
+        </div>
+
+        <div class="input-password">
+            <mat-form-field
+                appearance="outline"
+                id = 'confirm-password'>
+                <mat-label>Confirm Password</mat-label>
+                <input
+                 matInput
+                 [type]= "visibilityStatusConfirm "
+                 placeholder="Confirm Password"
+                 formControlName = "confirmPassword"
+                 minlength="5"
+                 maxlength="5"
+                 pattern="[0-9]*"
+                 required
+                 >
+            </mat-form-field>
+            <mat-icon
+            matSuffix
+            (click) = "onVisibilityChange('confirmPassword')"
+            style="cursor: pointer;"
+            id="visibility"
+            >
+            {{visibilityStatusConfirm == "confirmpassword"? "visibility_off": "visibility"}}
+            </mat-icon>
+        </div>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      id="confirm"
+      type="submit"
+      >Confirm</button>
+</form>
+
+<div *ngIf="cardManageOptions === 'Hotlist Card'" class="hotlist">
+
+  <div *ngIf="!success">
+    <div class="dialog-body">
+      <mat-icon style="color: #F44336; margin-right: 20px; cursor: pointer;" mat-dialog-close>
+        warning
+      </mat-icon>
+      <p>
+        Are you sure you want to Hotlist this card? <br> You can't undo this action
+      </p>
+    </div>
+  
+    <div class="dialog-action">
+      <button
+        id="confirm"
+      mat-button
+      style="
+        width: 150px;
+        height: 42px;
+        border-radius: 4px;
+        background: #005CC8;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-top: 20px;
+      "
+      type="button"
+      (click) = hotlist();
+    >
+      Confirm
+    </button>
+  
+    </div>
+  </div>
+
+  <div *ngIf="success" class="success">
+    <div class="sphere">
+      <mat-icon style="color: #06de9d"> done </mat-icon>
+    </div>
+    <strong style="display: block;margin-bottom: 10px;">Card Hotlisting done!</strong>
+    <p style="margin-bottom: 0;">
+      You have successfully hotlisted your NGN Virtual card ending with ,
+      and it’s not enabled for transaction.
+    </p>
+    <button
+      mat-button
+      style="
+        width: 150px;
+        height: 42px;
+        border-radius: 4px;
+        background: #005cc8;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+      "
+      id="done"
+
+      mat-dialog-close
+    >
+      Done
+      <!-- routerLink="/virtual-card/card-management" -->
+    </button>
+  </div>
+ 
+</div>
+  
+  </mat-card-content>
+</mat-card>

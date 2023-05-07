@@ -1,0 +1,53 @@
+<div class="container">
+    <h3>Confirm OTP</h3>
+    <div class="box">
+      <img [src]="'/images/smartphone 1.png' | assetUrl" />
+      <span class="description">
+        Please input the 5-digit OTP sent to your mobile number
+      </span
+      >
+    </div>
+  
+    <form  [formGroup]="newForm" (ngSubmit)="onSubmit()" class="ui form">
+      <div class="input-box">
+        <mat-form-field id="OTP" appearance="outline">
+          <mat-label>OTP</mat-label>
+          <input
+            matInput
+            placeholder="Enter OTP"
+            ngModel
+            name="newForm.get('otp')"
+            type ="text"
+            minlength="5"
+            maxlength="5"
+            required
+            pattern="[0-9]*"
+            formControlName="otp"
+            (keypress)="numberOnly($event)"> 
+            <mat-error *ngIf="newForm.controls['otp'].hasError('minLength')">
+                Please enter a valid number (5 digits long)
+              </mat-error>
+            </mat-form-field>
+
+        
+        <div class="text-wrapper">
+          <span> Resend OTP </span>
+          <span> OTP Expires in 
+           
+           <span id="check">{{ minutes }}:{{ seconds < 10 ? "0" + seconds : seconds }}</span> 
+          </span>
+         
+        </div>
+      </div>
+     <!--<mat-progress-bar *ngIf="loader" mode="indeterminate" class="loader"></mat-progress-bar> -->
+      <div class="action-box">
+        <button type="button" (click)= "onSubmit()"  [disabled]="newForm.invalid" class="ok-button">
+          CONFIRM 
+        </button>
+        <button type="button" class="cancel-button" (click)="onCancel()">CANCEL</button>
+      </div>
+    </form>
+  </div>
+  
+
+

@@ -1,0 +1,116 @@
+<div class="login-container">
+  <div *ngIf="requestOngoing">
+    <mat-progress-bar
+      mode="indeterminate"
+      color="{{ 'primary' }}"
+    ></mat-progress-bar>
+  </div>
+  <div class="log-int-container">
+    <img
+      [src]="'images/standard_bank_logo.png' | assetUrl"
+      alt="Standard Bank Logo"
+    />
+    <div class="init-text">
+      <strong i18n>Stanbic IBTC Bank</strong>
+      <small i18n>A member of Standard Bank Group</small>
+    </div>
+  </div>
+
+  <div class="login-text">
+    <h2 i18n>Login to your account</h2>
+<!--    <p i18n>-->
+<!--      New to Internet banking?-->
+<!--      <span><a (click)="openAccountCreation()" >Create account</a></span>-->
+<!--    </p>-->
+  </div>
+
+  <form [formGroup]="userForm" (ngSubmit) = "authenticateUser()">
+    <div class="form-group">
+      <mat-form-field appearance="outline" id="internet-banking-id">
+        <mat-label i18n>Internet Banking ID</mat-label>
+        <input
+          matInput
+          autocomplete="off"
+          type="text"
+          placeholder="Internet Banking ID"
+          formControlName="userID"
+        />
+        <mat-icon matSuffix i18n>person</mat-icon>
+      </mat-form-field>
+      <div class="input-password">
+        <mat-form-field appearance="outline" id="password">
+          <mat-label i18n>Password</mat-label>
+          <input
+            matInput
+            [type]="visibilityStatus"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </mat-form-field>
+        <mat-icon
+          matSuffix
+          (click)="onVisibilityChange()"
+          style="cursor: pointer"
+          id="visibility"
+        >
+          {{ visibilityStatus == "password" ? "visibility_off" : "visibility" }}
+        </mat-icon>
+      </div>
+    </div>
+    <a class="forgot-pass nav-link" routerLink="/auth/Chosebankingtype" i18n>
+      Forgot password?</a
+    >
+
+    <button
+      mat-raised-button
+      color="primary"
+      id="login"
+      type="submit"
+      [disabled]="userForm.invalid || isLoading"
+      i18n>
+      Login
+    </button>
+  </form>
+
+  <!--
+  <div class="quick-services">
+      <mat-icon color="primary">info</mat-icon>
+      <p>Want to carry out modifications without going to a branch? <a>GO TO QUICK SERVICES</a></p>
+      <mat-icon color="primary">arrow_forward_ios</mat-icon>
+  </div> -->
+
+  <strong i18n>Click below to visit our other businesses</strong>
+  <div class="quick-links">
+
+      <a class="items mutual funds" href="https://www.stanbicibtcassetmanagement.com/nigeriaassetmanagement/individual-investor" target="_blank" >
+        <img [src]="'images/Mutual Funds.png' | assetUrl" alt="" />
+        <p i18n>Mutual Funds</p>
+    </a>
+
+      <a class="items pension" href="https://ssl.stanbicibtcpension.com/" target="_blank">
+        <img [src]="'images/Pensions.png' | assetUrl" alt="" />
+        <p i18n>Pensions</p>
+    </a>
+
+
+
+      <a class="items @ease" href="https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/@ease-wallet" target="_blank" >
+        <img [src]="'images/@Ease.png' | assetUrl" alt="" />
+        <p i18n>@Ease</p>
+    </a>
+
+      <a class="items insurance" href="https://www.stanbicibtcinsurancebrokers.com/" target="_blank" >
+        <img [src]="'images/Insurance.png' | assetUrl" alt="" />
+        <p i18n>Insurance</p>
+    </a>
+
+      <a class="items stock" href="https://www.stanbicibtcstockbrokers.com/" target="_blank">
+        <img [src]="'images/Stock.png' | assetUrl" alt="" />
+        <p i18n>Stock</p>
+    </a>
+
+    <!-- <mat-icon color="primary">info</mat-icon>
+      <p>Want to carry out modifications without going to a branch? <a>GO TO QUICK SERVICES</a></p>
+      <mat-icon color="primary">arrow_forward_ios</mat-icon> -->
+  </div>
+</div>

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: control-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: control
+  template:
+    metadata:
+      labels:
+        app: control
+    spec:
+      containers:
+        - name: control
+          image: vbox45/control
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: control-srv
+spec:
+  selector:
+    app: control
+  ports:
+    - name: control
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+      
+      
+      
+      
+      
+      
+      
+      

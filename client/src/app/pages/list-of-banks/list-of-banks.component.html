@@ -1,0 +1,66 @@
+<main>
+    <app-header [title]="'List of Banks'" ></app-header>
+    <section>
+        <mat-toolbar>
+            <input type="text" placeholder="Search" class="search-field" (input)="search($event)">
+            <span class="example-spacer"></span>
+
+            <button mat-button>
+                Refresh List
+            </button>        
+        </mat-toolbar>
+    </section>
+    <section>
+        <div class="table-container">
+            <table class="example-list" style="width: 100%;"  class="ui compact celled definition table"  >
+                <thead  class="table-head">
+                    <tr>
+                        <th id="table-no" class="table-title">No</th>
+                        <th id="table-name" class="table-title">Name</th>
+                        <th id="table-contact" class="table-title">Contact</th>
+                        <th id="table-cbn-code" class="table-title">Cbn Code</th>
+                        <th id="table-email-address" class="table-title">Email Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                    <tr  *ngFor="let control of statesList" cdkDrag >
+                        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        
+                        <td>
+                            <div>
+                                {{control.result.appName}} 
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                {{control.result.appURL}}
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                {{control.result.appMenuName}}
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                {{control.result.appRoute}}
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                {{control.result.appRoute}}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="isloading == true" class="loading-container">
+                <mat-spinner></mat-spinner>
+                <div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

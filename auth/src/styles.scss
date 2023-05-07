@@ -1,0 +1,56 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$InternetBankingAuthentication-primary: mat.define-palette(mat.$indigo-palette);
+$InternetBankingAuthentication-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$InternetBankingAuthentication-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$InternetBankingAuthentication-theme: mat.define-light-theme((
+  color: (
+    primary: $InternetBankingAuthentication-primary,
+    accent: $InternetBankingAuthentication-accent,
+    warn: $InternetBankingAuthentication-warn,
+  )
+));
+
+@import "./theme-styles/_darkTheme.css";
+@import "./theme-styles/_lightTheme.css";
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($InternetBankingAuthentication-theme);
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+* {margin: 0;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  color: var(--auth-PrimaryText);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline .mat-form-field-empty.mat-form-field-label {
+  color: var(--auth-PrimaryText) ;
+  background-color: var(--home-BackgroundColor) ;
+  border-radius: 5px;
+}
+
+

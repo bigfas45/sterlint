@@ -1,0 +1,96 @@
+<main>
+    <section class="section1">
+        <div class="info-card">
+            <table>
+                <tr>
+                    <td>
+                        <div class="staff-profilephoto"></div>
+                    </td>
+                    <td>
+                        <div class="staff-info1">
+                            Omosaiye Oluwatayo
+                        </div>
+                        <div class="staff-info2">
+                            Master Admin
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    
+    <section class="section2">
+        <div class="sidebar-sub-title">App Control</div>
+        <!-- <button class="current-btn" mat-button (click)="navigateToApplications()">
+           <img src="../../../assets/manage-apps.png" alt=""> 
+           Manage applications
+        </button> -->
+        <button mat-button id="nav-1" (click)="navigateTo('dashboard',$event)"  class="sidebar-btn" >
+           <div class="s-img img-1"></div>
+           Manage applications
+        </button>
+    
+        <button mat-button id="nav-2" (click)="navigateTo('dashboard/manage-web-advert',$event)" class="sidebar-btn">
+            <div class="s-img img-2"></div>
+            Web adverts
+        </button>
+
+        <button mat-button id="nav-3" (click)="navigateTo('dashboard/manage-mobile-advert',$event)" class="sidebar-btn">
+            <div class="s-img img-3"></div>
+            Mobile adverts
+        </button>
+    </section>
+    <div class="section-divider"></div>
+
+    <section class="section2">
+        <div class="sidebar-sub-title">Admin Control</div>
+     
+
+        <button mat-button id="nav-4" (click)="navigateTo('dashboard/push-notifications',$event)" class="sidebar-btn">
+            <div class="s-img img-4"></div>
+            Push Notification
+        </button>
+
+        <button mat-button id="nav-5" (click)="navigateTo('dashboard/customers',$event)" class="sidebar-btn">
+            <div class="s-img img-5"></div>
+            Customers
+        </button>
+
+        <button mat-button id="nav-6" (click)="navigateTo('dashboard/transactions-page',$event)" class="sidebar-btn">
+            <div class="s-img img-6"></div>
+            Transactions
+        </button>
+
+        <button mat-button id="nav-7" (click)="navigateTo('dashboard/audit-trail',$event)" class="sidebar-btn">
+            <div class="s-img img-7"></div>
+            Audit Trail
+        </button>
+    </section>
+    <div class="section-divider"></div>
+    
+    <section class="section2">
+        <div class="sidebar-sub-title">CACHE REFRESH</div>
+        <button mat-button (click)="navigateTo('dashboard/list-of-states',$event)" >
+            <div class="s-img img-8"></div>
+
+           List of states
+        </button>
+        <button mat-button (click)="navigateTo('dashboard/list-of-branches',$event)">
+            <div class="s-img img-9"></div>
+            List of Branches
+        </button>
+        <button mat-button (click)="navigateTo('dashboard/list-of-banks',$event)">
+            <div class="s-img img-10"></div>
+            List of Banks
+        </button>
+    </section>
+    <div class="section-divider"></div>
+    
+    <section class="section2">
+        <button mat-button (click)="logout()">
+            <div class="s-img img-11"></div>
+            Logout
+        </button>
+    </section>
+</main>

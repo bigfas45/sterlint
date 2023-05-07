@@ -1,0 +1,209 @@
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.log-int-container,
+.welcome-container,
+.account-open-container,
+.privacy {
+  display: none;
+  // margin-top: 25%;
+}
+
+.download-app p {
+  margin-bottom: 8%;
+}
+
+.download-buttons {
+  margin-bottom: 8%;
+}
+
+.init-text {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.welcome-container {
+  p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400px;
+  }
+}
+
+
+.download-button {
+  background: none;
+  border: none;
+  display: inline-block;
+  width: 40%;
+  max-width: 150px;
+  margin-bottom: 8%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.download-button:active {
+  transform: scale(0.98);
+}
+
+.download-button.apple-store {
+  width: 45%;
+  max-width: 170px;
+  margin-left: 2%;
+}
+
+.download-button.play-store {
+  margin-right: 2%;
+}
+
+.download-button img {
+  width: 100%;
+}
+
+.download-button.apple-store img {
+  width: 100%;
+}
+
+.quick-services {
+  background-color: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  padding: 2%;
+  border-radius: 3px;
+}
+
+.quick-services mat-icon {
+  color: #fff;
+  font-size: 18px;
+
+  &.qs {
+    transform: rotate(90deg);
+  }
+}
+
+.quick-services p {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-s);
+  margin: 0 2%;
+}
+
+.quick-services a {
+  color: #fff;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  margin-top: 12px;
+  justify-content: space-between;
+  a {
+      cursor: pointer;
+      img {
+          width: 32px;
+          margin-bottom: 4px;
+      }
+  }
+}
+
+.copyRight {
+  display: none;
+}
+
+@media (width < 1000px) {
+  .privacy {
+    margin-top: 58%;
+  }
+}
+
+
+
+@media (width >= 1000px) {
+  .privacy {
+    margin-top: 42%;
+  }
+}
+
+
+
+@media (width >= 850px) {
+  .log-int-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8%;
+  }
+
+  .log-int-container img {
+    width: 90%;
+    margin-right: 3%;
+  }
+
+  .welcome-container {
+    display: block;
+    margin-bottom: 8%;
+  }
+
+  .account-open-container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto;
+    column-gap: 3%;
+    margin-bottom: 3%;
+    cursor: pointer;
+  }
+
+  .account-open-container .spherical-el {
+    position: relative;
+    grid-row: 1/ span 2;
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    .qs {
+      transform: rotate(90deg);
+    }
+  }
+
+  .account-open-container a {
+    grid-column: 2;
+    color: #fff;
+    font-size: var(--fs-xs);
+  }
+
+  .download-app {
+    margin-top: 15%;
+    display: none;
+  }
+
+  .download-app p {
+    margin-bottom: 4%;
+  }
+
+  .quick-services {
+    display: none;
+  }
+
+  .quick-links {
+    display: none;
+  }
+
+  .privacy {
+    display: block;
+    // margin-top: 42%;
+  }
+}

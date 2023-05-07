@@ -1,0 +1,74 @@
+<main>
+    <app-header [title]="'Manage Advert . (mobile)'"></app-header>
+    <div class="sub-flex-container">
+        <div class="flex-child-1">
+            <div class="manage-adv-title">
+                Sections
+            </div>
+            <div>
+                Summary of Portal
+            </div>
+
+        </div>
+        <div class="flex-child-2">
+            <div class="manage-adv-title">
+                Ads 
+
+                <button class="add-button" style="float: right;" mat-button routerLink="/dashboard/manage-mobile-advert-create-new">
+                    <img src="../../../assets/add-icon.png" alt="" style="width: 17px;"> &nbsp;&nbsp; Create New Ads
+                 </button> 
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-child-1">
+            
+            <div class="child-1-summary-container">
+
+                <!-- <div *ngFor="let data of adSummaryList" class="list-flex-container">
+                    <div >
+                        <div>
+                            Home
+                        </div>
+                        <span style="flex: 1;"></span>
+                        <div>
+                            2 Ads
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="list-flex-container ">
+                    <div class="list-name">
+                        Home
+                    </div>
+                    <span style="flex: 1;"></span>
+                    <div>
+                        2Ads
+                    </div>
+                </div>
+                <div  class="list-flex-container">
+                    <div class="list-name">
+                        Pension
+                        </div>
+                        <span style="flex: 1;"></span>
+                        <div>
+                            2Ads
+                        </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+        <div class="flex-child-2">
+            
+            <div class="child-2-summary-container">
+                <div class="img-flex-container">
+                    <div *ngFor="let data of adSummaryListImages"  class="adv-img-holder">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

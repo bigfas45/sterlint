@@ -1,0 +1,84 @@
+.modal{
+    
+
+    .header{
+        font-family: 'BentonSansMedium' , sans-serif;
+        font-style: bold;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: #222222;
+    }
+
+    .content{
+        left: 34.51%;
+        right: 34.58%;
+        top: 29.53%;
+        bottom: 61.1%;
+        background: #EFEFEF;
+        border-radius: 10px;
+        width: 445px;
+        height: 78px;
+     
+        
+
+        .ccc{
+            display: flex;
+            svg{
+                margin: 16px;
+            }
+            .text{
+                margin: 32px;
+                font-family: 'BentonSansMedium',  sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 14px;
+                display: flex;
+                align-items: center;
+                color: #1D1D1D;
+            }
+           
+       
+          
+        }
+    
+        
+    }
+
+
+    .content:nth-child(even){
+        left: 34.51%;
+        right: 34.58%;
+        top: 29.53%;
+        bottom: 61.1%;
+        background: #fff;
+        border-radius: 10px;
+        width: 445px;
+        height: 78px;
+        
+
+        .ccc{
+            display: flex;
+            svg{
+                margin: 16px;
+            }
+            .text{
+                margin: 32px;
+                font-family: 'BentonSansMedium',  sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 14px;
+                display: flex;
+                align-items: center;
+                color: #1D1D1D;
+            }
+           
+       
+          
+        }
+    
+        
+    }
+}

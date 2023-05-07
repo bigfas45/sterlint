@@ -1,0 +1,30 @@
+
+<main>
+    <section>
+        <div class="flex-container">
+            <div class="flex-child image-section">
+           
+            </div>
+            <div class="flex-child form-section">
+                <div class="form-div">
+                    <form [formGroup]="loginForm">
+                        <div style="font-size: 20px; font-weight:bold; padding-top: 20px; padding-bottom: 20px;">
+                            Login to Online Banking Admin
+                        </div>
+                        <span>Enter your SAP ID & Password</span>
+                        <mat-form-field appearance="outline">
+                            <mat-label>SAP ID</mat-label>
+                            <input matInput type="text" formControlName="sapid" placeholder="">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>PASSWORD</mat-label>
+                            <input matInput type="password" formControlName="password" placeholder="">
+                        </mat-form-field>
+
+                        <button class="auth-btn" mat-button (click)="Authenticate()"> LOGIN </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

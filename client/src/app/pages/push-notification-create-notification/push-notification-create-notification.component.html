@@ -1,0 +1,58 @@
+<main>
+    <app-header [title]="'Push Notifications'"></app-header>
+    <!-- <section>
+        <mat-toolbar>
+            <span>Dashboard</span>
+            <input type="text" placeholder="Search" class="search-field" (input)="search($event)">
+            <button (click)="addAppControl()" mat-button>
+               <img src="../../../assets/add-icon.png" alt="" style="width: 17px;"> &nbsp;&nbsp; Add New App
+            </button>        
+        </mat-toolbar>
+    </section> -->
+    <div class="flex-container">
+      
+        <button routerLink="/dashboard/push-notifications" mat-button style="border: 1px solid #f5f5f5;">
+            <mat-icon>arrow_back</mat-icon>&nbsp;&nbsp; back
+        </button> 
+       
+    </div>
+    <section>
+        <div class="push-notification-title">
+            Create new promotion
+        </div>
+
+        <div class="flex-container ">
+            <div class="flex-child-1">
+
+                <p class="formlabel">
+                    Name of promotion
+                </p>
+                <input type="text"  >
+
+                <p class="formlabel">
+                    Alert
+                </p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            
+            </div>
+            <div class="flex-child-2">
+
+                <p class="formlabel">
+                    Device type
+                </p>
+                <input type="text"  >
+
+                <p class="formlabel">
+                    Message
+                </p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            
+            </div>
+        </div>
+
+        <button mat-button>
+            Submit
+        </button>
+        
+    </section>
+</main>
